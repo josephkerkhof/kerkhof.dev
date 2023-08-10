@@ -1,0 +1,57 @@
+baseURL = 'https://kerkhof.dev/'
+languageCode = 'en-us'
+title = "Joseph's Website"
+theme = "archie"
+canonifyURLs = true
+subtitle = ""
+
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+enableEmoji = true # https://www.webfx.com/tools/emoji-cheat-sheet/
+enableRobotsTXT = true
+
+paginate=4
+
+[params]
+	mode="toggle"
+	useCDN=false
+	subtitle = ""
+
+[Author]
+    name = "Joseph Kerkhof"
+    email = "joseph@kerkhof.dev"
+    github = "josephkerkhof"
+
+[[params.social]]
+    name = "GitHub"
+    icon = "github"
+    url = "https://github.com/josephkerkhof"
+[[params.social]]
+    name = "RSS"
+    icon = "rss"
+    url = "https://kerkhof.dev/index.xml"
+
+[[menu.main]]
+    name = "home"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "all posts"
+    title = "All Posts"
+    url = "/posts"
+    weight = 2
+
+[[menu.main]]
+    name = "tags"
+    title = "Tags"
+    url = "/tags"
+    weight = 3
+
+[[menu.main]]
+    name = "contact"
+    title = "Contact"
+    url = "/contact"
+    weight = 4
