@@ -1,6 +1,6 @@
 ---
 title: "Introduction"
-subtitle: "Computers are cool 🖥️"
+subtitle: "Soli Deo gloria"
 description: "Welcome to my website"
 
 ---
