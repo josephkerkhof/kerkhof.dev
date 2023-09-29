@@ -22,7 +22,7 @@ What's important to note here is that the dots aren't being fed instructions on 
 
 You can see that the first few generations look pretty random, but by about generation 5 or 6 the dots pretty much have it figured out. By generation 8 or so it's about the same for each iteration and they've stopped improving.
 
-To determine which dots did the best in a generation a success function is used:
+To determine which dots did the best in a generation, a success function is used:
 
 ```java
 public void calculateFitness(Pair<Integer, Integer> goalPosition){
@@ -32,8 +32,7 @@ public void calculateFitness(Pair<Integer, Integer> goalPosition){
         double distanceToGoal = calcDistanceToGoal(goalPosition);
         fitness = 1.0 / Math.pow(distanceToGoal, 2);
     }
-    if(fitness == Double.POSITIVE_INFINITY) {
-        fitness = 1;
-    }
 }
 ```
+
+This function heavily rewards dots that reach the red dot in the fewest steps possible (the number of steps the dot takes is the `brainStep` variable). If the dot does not reach the goal, we need to figure out how close it got and reward the dots that get closer. In this fitness funcion, higher numbers are better.
