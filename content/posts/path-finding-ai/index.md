@@ -4,6 +4,7 @@ date: 2023-09-28T16:22:21-05:00
 draft: false
 tags:
 - 🖥️ programming
+- 🧠 artificial intelligence
 
 ---
 
@@ -17,7 +18,9 @@ Here's a demo of what I came up with:
 
 What's important to note here is that the dots aren't being fed instructions on how to move from their starting location to the finishing point (the red dot). Instead, each of the dots move about randomly at the start and as generations pass, each iteration gets better and better at finding the correct path. After each generation the best dots are picked and future generations apply random deviations to the movements from the best of the last generation.
 
-To determine which dots did the best in a genration a success function is used:
+You can see that the first few generations look pretty random, but by about generation 5 or 6 the dots pretty much have it figured out. By generation 8 or so it's about the same for each iteration and they've stopped improving.
+
+To determine which dots did the best in a generation a success function is used:
 
 ```java
 public void calculateFitness(Pair<Integer, Integer> goalPosition){
