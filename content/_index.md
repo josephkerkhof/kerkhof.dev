@@ -5,7 +5,7 @@ description: "Welcome to my website"
 
 ---
 
-{{< figure src="images/profile.jpg" class="text-center" title="It's me!" alt="A profile picture of Joseph Kerkhof" width="200" >}}
+{{< figure src="images/profile.webp" class="text-center" title="It's me!" alt="A profile picture of Joseph Kerkhof" width="200" >}}
 
 Hello, nice to meet you! 👋 I'm Joseph, a full-stack software engineer with a knack for using open source software to create human-centered experiences.
 
