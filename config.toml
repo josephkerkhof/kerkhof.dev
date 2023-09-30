@@ -1,6 +1,6 @@
 baseURL = 'https://kerkhof.dev/'
 languageCode = 'en-us'
-title = "Joseph's Website"
+title = "Joseph Kerkhof"
 theme = "archie"
 canonifyURLs = true
 subtitle = ""
