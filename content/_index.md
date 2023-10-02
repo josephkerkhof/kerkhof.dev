@@ -7,7 +7,7 @@ description: "Welcome to my website"
 
 {{< figure src="images/profile.webp" class="text-center" title="It's me!" alt="A profile picture of Joseph Kerkhof" width="200" >}}
 
-Hello, nice to meet you! 👋 I'm Joseph, a full-stack software engineer by day 😎, perpetual tinkerer by night 🧰. Saved by grace thru faith ✝️.
+Hello, nice to meet you! 👋 I'm Joseph, a full-stack software engineer by day 😎, curious tinkerer by night 🧰. Saved by grace thru faith ✝️.
 
 ## Dev Philosophy
 
