@@ -25,6 +25,10 @@ paginate=4
     github = "josephkerkhof"
 
 [[params.social]]
+    name = "Twitter"
+    icon = "twitter"
+    url = "https://twitter.com/josephkerkhof"
+[[params.social]]
     name = "GitHub"
     icon = "github"
     url = "https://github.com/josephkerkhof"
