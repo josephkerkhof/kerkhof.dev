@@ -14,4 +14,4 @@ curl -sL https://kerkhof.dev/josephkerkhof.gpg | gpg --import
 
 My GPG key fingerprint: `51C7 FCE5 909B 5D1F 8081  3F06 71A6 96CA C91C EA76`
 
-You may also find me on [Github](https://github.com/josephkerkhof) and [Twitter](https://twitter.com/josephkerkhof).
+You may also find me on [Twitter](https://twitter.com/josephkerkhof), [LinkedIn](https://www.linkedin.com/in/josephkerkhof), and [Github](https://github.com/josephkerkhof).

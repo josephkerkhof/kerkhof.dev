@@ -29,6 +29,10 @@ paginate=4
     icon = "twitter"
     url = "https://twitter.com/josephkerkhof"
 [[params.social]]
+    name = "LinkedIn"
+    icon = "linkedin"
+    url = "https://www.linkedin.com/in/josephkerkhof"
+[[params.social]]
     name = "GitHub"
     icon = "github"
     url = "https://github.com/josephkerkhof"
