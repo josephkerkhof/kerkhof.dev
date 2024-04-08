@@ -10,36 +10,36 @@ tags:
 
 # Intro
 
-When working with a database, you're often working with a lot of data, and it's likely necessary to search through that data quickly. One excellent option is to use indexes to speed up your queries. But what if you're working with a field (or multiple fields used together) that are long are difficult to index?
+When working with a database, you're often working with a lot of data, and it's likely necessary to search through that data quickly. One excellent option to help with this is to use indexes to speed up your queries. But what if you're working with a field (or multiple fields used together) that are quite long and difficult to index? It is possible to index these fields, but what are the trade-offs and how can you do it effectively?
 
 # The Setup
 
-I had a cron job that I was working on that ran every hour. Our commission's table had millions of rows. Google Click IDs (gclid) are up to 100 characters long, and when combined with a timestamp, tell Google which ad click resulted in a conversion.
+I had a cron job that ran every hour parsing data from our commissions table. This commissions table had millions of rows including two fields: Google Click IDs and the conversion timestamp. Google Click IDs (gclid) are up to 100 characters long, and when combined with a timestamp, can tell Google which ad click resulted in a conversion on our platform.
 
-My cron job needed to upload new commissions to Google's API but only if the commission hadn't been uploaded before (ex. the first instance of a gclid + timestamp combination).
+My cron job needed to upload new commissions to Google's API but only if the commission hadn't been uploaded before (ex. the first instance of a gclid + conversion timestamp combination). Because multiple commissions can have the same gclid and timestamp, I needed to search for all commissions with the same gclid and timestamp, get the first one, and upload that one to Google.
 
 # The Problem
 
-My first thought was to reach for a composite index containing both the gclid and the conversion timestamp. 
+I needed a way to perform `SELECT` queries quickly for each of the commission records I processed. My first thought was to reach for a composite index containing the gclid and the conversion timestamp. 
 
-Since the gclid and timestamp are both long fields, I was concerned about the size of the index. I was also concerned about the performance of the index since the gclid field is a string. The sheer size of our commission's table made me concerned about this approach to my query speed problem.
+Since the gclid and timestamp are both long fields and the gclid can be up to 100 characters in length, I was concerned about the file size of the index on the database. Even though the speed would probably be fine, the size of the index could get pretty unruly. Was there a more efficient way to index these fields without sacrificing querying speed?
 
 # My Solution
 
-Rather than using a composite index, I decided to use an MD5 hash of the combination of the gclid and timestamp fields. Because I was only using this field for searching for an amalgamation of the two fields, I could create this new field as a `computed` field in MySQL. This way if one of the two fields ever changed, the MD5 hash would change as well.
+Rather than using a composite index, I decided to use an MD5 hash with the concatenation of the gclid and timestamp fields. Because I was searching on these fields combined, I could create a new `computed` field in MySQL. This way if one of the two fields (gclid or conversion timestamp) ever changed, the MD5 hash would be recalculated as well.
 
-Because the MD5 hash has a fixed length I could also take advantage of a smaller field an index size by storing it as a binary blob. This would also make the index faster to search. MD5 hashes can fit inside a 16-byte binary field.
+Because all MD5 hashes have fixed lengths, I could also take advantage of a smaller field and index size by storing it as a binary blob. This would also make the index faster to search. MD5 hashes can fit inside a 16-byte binary field.
 
 Here's how I created the computed field:
 
 ```sql
 -- Create the new, computed field to store the MD5 hash
 ALTER TABLE commissions
-ADD COLUMN gclid_timestamp_hash BINARY(16) 
-AS (UNHEX(MD5(CONCAT(gclid, timestamp))) STORED;
+ADD COLUMN gclid_conversion_timestamp_hash BINARY(16) 
+AS (UNHEX(MD5(CONCAT(gclid, conversion_timestamp))) STORED;
 
 -- Create an index on the new field
-CREATE INDEX gclid_timestamp_hash_index ON commissions (gclid_timestamp_hash);
+CREATE INDEX gclid_conversion_timestamp_hash_index ON commissions (gclid_conversion_timestamp_hash);
 ```
 
 # Some Trade-offs
@@ -56,4 +56,4 @@ I would not be a good developer unless I threw in some "it depends on your situa
 
 # Conclusion
 
-This solution has worked really well for me and my team. Our `SELECT` queries run in fractions of a second now that this new index is in place. It's amazing how many records the MySQL database can sort through to give you all results that have this same gclid and timestamp.
+This solution has worked really well for me and my team. Our `SELECT` queries run in fractions of a second now that this new index is in place and the index is stored efficiently. It's amazing how many records the MySQL database can sort through giving you all results that have the same gclid and conversion timestamp.
