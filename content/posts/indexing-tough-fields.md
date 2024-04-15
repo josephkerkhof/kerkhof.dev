@@ -42,6 +42,22 @@ AS (UNHEX(MD5(CONCAT(gclid, conversion_timestamp))) STORED;
 CREATE INDEX gclid_conversion_timestamp_hash_index ON commissions (gclid_conversion_timestamp_hash);
 ```
 
+Let's work through the new stored field from the inner most parenthesis outwards:
+
+1. `CONCAT(gclid, conversion_timestamp)`: This concatenates the gclid and conversion timestamp fields together.
+2. `MD5(...)`: This calculates the MD5 hash of the concatenated fields.
+3. `UNHEX(...)`: This converts the MD5 hash to a binary blob which is then stored in the `binary(16)` field.
+
+It should be noted that if we want to go the other way (from binary to MD5 hash), we can use the `HEX` function:
+
+```sql
+-- Get the MD5 hash from the binary field
+SELECT HEX(gclid_conversion_timestamp_hash) FROM commissions;
+
+-- Get a record by an MD5 hash
+SELECT * FROM commissions WHERE gclid_conversion_timestamp_hash = UNHEX("known_md5_hash");
+```
+
 # Some Trade-offs
 
 I would not be a good developer unless I threw in some "it depends on your situation" caveats. Here are some things to consider:
