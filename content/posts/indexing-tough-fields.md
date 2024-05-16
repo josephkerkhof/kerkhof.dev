@@ -62,13 +62,27 @@ SELECT * FROM commissions WHERE gclid_conversion_timestamp_hash = UNHEX("known_m
 
 I would not be a good developer unless I threw in some "it depends on your situation" caveats. Here are some things to consider:
 
-- MD5 hashes
-  - They aren't reversible. If you need to know the original values of the gclid and timestamp, you'll need to store them separately. In my case, this was already done for me; the only change I made was creating a new field to store the hash.
-  - They aren't guaranteed to be unique. If you have a lot of data, you may run into hash collisions. This is a very low probability because the chance of an MD5 hash collision is 1 in 2^128 - a very low chance indeed. If you're worried about this, you could use a different hash function like SHA-256.
-- It might be considered a little unorthodox to use `computed` fields in a database.
-  - Inserts & Updates: Be careful your calculated field isn't too complex and slow to calculate. The calculations occur on inserts/updates and are included as part of the runtime of the database transaction.
-  - Portability: Not all databases support computed fields. MySQL does, but if you ever need to move to a different database, you may need to rethink your approach.
-  - Complexity: Computed fields can add complexity to your database schema. If you're working with a team, make sure they understand what you're doing and why.
+## The MD5 hashes themselves...
+
+MD5 hashes aren't reversible. If you need to know the original values of the gclid and timestamp, you'll need to store them separately. In my case, this was already done for me; the only change I made was creating a new field to store the hash.
+
+MD5 aren't guaranteed to be unique. If you have a lot of data, you may run into hash collisions. This is a very low probability because the chance of an MD5 hash collision is 1 in 2^128 - a very low chance indeed. If you're worried about this, you could use a different hash function like SHA-256.
+
+## It might be considered unorthodox...
+
+It might be considered a little unorthodox to use `computed` fields in a database.
+
+### Inserts & Updates
+
+Be careful your calculated field isn't too complex and slow to calculate. The calculations occur on inserts/updates and are included as part of the runtime of the database transaction.
+
+### Portability
+
+Not all databases support computed fields. MySQL does, but if you ever need to move to a different database, you may need to rethink your approach. 
+
+### Complexity
+
+Computed fields can add complexity to your database schema. If you're working with a team, make sure they understand what you're doing and why.
 
 # Conclusion
 
