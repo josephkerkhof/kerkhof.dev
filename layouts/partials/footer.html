@@ -9,8 +9,10 @@
     {{ dateFormat "2006" now }} {{ with .Site.Copyright }} {{ . }} | {{ end }}
   </div>
 </footer>
-{{ if not .Site.IsServer }}
-{{ template "_internal/google_analytics_async.html" . }}
+{{ if not hugo.IsServer }}
+{{ with site.Config.Services.GoogleAnalytics.ID }}
+{{ template "_internal/google_analytics.html" $ }}
+{{ end }}
 {{ end }}
 
 {{- if (isset .Site.Params "social") -}}

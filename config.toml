@@ -12,14 +12,15 @@ pygmentscodefencesguesssyntax = true
 enableEmoji = true # https://www.webfx.com/tools/emoji-cheat-sheet/
 enableRobotsTXT = true
 
-paginate=4
+[pagination]
+pagerSize = 4
 
 [params]
 	mode="toggle"
 	useCDN=false
 	subtitle = ""
 
-[Author]
+[params.author]
     name = "Joseph Kerkhof"
     email = "joseph@kerkhof.dev"
     github = "josephkerkhof"
