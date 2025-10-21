@@ -38,6 +38,10 @@ pagerSize = 4
     icon = "github"
     url = "https://github.com/josephkerkhof"
 [[params.social]]
+    name = "GitLab"
+    icon = "gitlab"
+    url = "https://gitlab.com/josephkerkhof/"
+[[params.social]]
     name = "RSS"
     icon = "rss"
     url = "https://kerkhof.dev/index.xml"
