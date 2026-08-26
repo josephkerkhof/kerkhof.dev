@@ -1,7 +1,10 @@
 {{- $siteURL := urls.Parse .Site.BaseURL -}}
 <header class="site-header shell">
   <div class="letterhead">
-    <a class="wordmark" href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
+    <div class="site-identity">
+      <a class="wordmark" href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
+      {{ with .Site.Params.motto }}<p class="header-motto"><em>{{ . }}</em></p>{{ end }}
+    </div>
     <nav aria-label="Primary navigation">
       <ul class="site-nav">
         {{ range .Site.Menus.main }}

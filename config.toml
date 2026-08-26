@@ -16,6 +16,7 @@ pagerSize = 4
 [params]
 	description = "Joseph Kerkhof is a senior backend engineer specializing in PHP, Laravel, distributed architectures, AI workflows, and cloud systems."
 	mainSections = ["posts"]
+	motto = "Soli Deo gloria"
 
 [params.author]
     name = "Joseph Kerkhof"
