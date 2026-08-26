@@ -3,9 +3,12 @@ locale = 'en-US'
 title = "Joseph Kerkhof"
 canonifyURLs = true
 
-pygmentsstyle = "monokai"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
+[markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    noClasses = false
+    lineNos = false
+    tabWidth = 4
 
 enableEmoji = true # https://www.webfx.com/tools/emoji-cheat-sheet/
 enableRobotsTXT = true

@@ -545,10 +545,145 @@ pre code {
 
 .highlight {
   max-width: 100%;
+  margin-block: 26px;
 }
 
 .highlight pre {
-  background: var(--ink) !important;
+  margin: 0;
+  color: #bcbec4;
+  background: #1e1f22;
+  border-color: #393b40;
+  box-shadow: 3px 3px 0 var(--registration);
+}
+
+.chroma {
+  color: #bcbec4;
+  background: #1e1f22;
+  -webkit-text-size-adjust: none;
+}
+
+.chroma .line {
+  display: flex;
+}
+
+.chroma .err {
+  color: #f0524f;
+}
+
+.chroma .k,
+.chroma .kc,
+.chroma .kd,
+.chroma .kn,
+.chroma .kp,
+.chroma .kr,
+.chroma .kt,
+.chroma .nb,
+.chroma .bp,
+.chroma .se,
+.chroma .ow {
+  color: #cf8e6d;
+}
+
+.chroma .s,
+.chroma .sa,
+.chroma .sb,
+.chroma .sc,
+.chroma .dl,
+.chroma .l,
+.chroma .ld,
+.chroma .sd,
+.chroma .s1,
+.chroma .s2,
+.chroma .sh,
+.chroma .si,
+.chroma .sx,
+.chroma .ss {
+  color: #6aab73;
+}
+
+.chroma .sr {
+  color: #42c3d4;
+}
+
+.chroma .m,
+.chroma .mb,
+.chroma .mf,
+.chroma .mh,
+.chroma .mi,
+.chroma .il,
+.chroma .mo {
+  color: #2aacb8;
+}
+
+.chroma .nf,
+.chroma .fm {
+  color: #56a8f5;
+}
+
+.chroma .nc,
+.chroma .nn,
+.chroma .nt,
+.chroma .tp {
+  color: #6fafbd;
+}
+
+.chroma .na,
+.chroma .py {
+  color: #c77dbb;
+}
+
+.chroma .no,
+.chroma .nd,
+.chroma .ni,
+.chroma .nl,
+.chroma .nv,
+.chroma .vc,
+.chroma .vg,
+.chroma .vi,
+.chroma .vm {
+  color: #c77dbb;
+}
+
+.chroma .cp,
+.chroma .cpf {
+  color: #b3ae60;
+}
+
+.chroma .c,
+.chroma .ch,
+.chroma .cm,
+.chroma .c1,
+.chroma .cs {
+  color: #7a7e85;
+  font-style: italic;
+}
+
+.chroma .o,
+.chroma .or,
+.chroma .p {
+  color: #bcbec4;
+}
+
+.chroma .gd {
+  color: #f0524f;
+  background: #402f33;
+}
+
+.chroma .gi {
+  color: #6aab73;
+  background: #373b39;
+}
+
+.chroma .ge {
+  font-style: italic;
+}
+
+.chroma .gs {
+  font-weight: 700;
+}
+
+.chroma .gl {
+  text-decoration: underline;
 }
 
 .callout {

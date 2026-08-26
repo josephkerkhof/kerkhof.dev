@@ -1,0 +1,23 @@
+{{- $result := transform.HighlightCodeBlock . -}}
+{{- $highlighted := $result.Wrapped -}}
+{{- $typeParameterPattern := "class=\"(nt|na|kt|nx)\">([A-Z])</span>" -}}
+{{- $highlighted = replaceRE $typeParameterPattern "class=\"tp\">$2</span>" $highlighted -}}
+{{- $keywordTypePattern := "class=\"kt\">(any|bigint|boolean|never|new|null|number|object|string|symbol|true|false|undefined|unknown|void)</span>" -}}
+{{- $highlighted = replaceRE $keywordTypePattern "class=\"k\">$1</span>" $highlighted -}}
+{{- $highlighted = replaceRE "class=\"na\">extends</span>" "class=\"k\">extends</span>" $highlighted -}}
+{{- $highlighted = replaceRE "class=\"na\">([A-Z][^<]*)</span>" "class=\"n\">$1</span>" $highlighted -}}
+{{- $highlighted = replaceRE "class=\"kt\"" "class=\"n\"" $highlighted -}}
+{{- $highlighted = replaceRE "class=\"nt\">([A-Z][^<]*)</span>" "class=\"n\">$1</span>" $highlighted -}}
+{{- $functionPattern := "class=\"(nb|nx)\"([^<]+)</span><span class=\"p\">\\(" -}}
+{{- $functionReplacement := "class=\"nf\"$2</span><span class=\"p\">(" -}}
+{{- $highlighted = replaceRE $functionPattern $functionReplacement $highlighted -}}
+{{- if ne .Type "tsx" -}}
+{{- $propertyPattern := "class=\"nx\"([^<]+)</span><span class=\"o\">:</span>" -}}
+{{- $propertyReplacement := "class=\"na\"$1</span><span class=\"o\">:</span>" -}}
+{{- $highlighted = replaceRE $propertyPattern $propertyReplacement $highlighted -}}
+{{- end -}}
+{{- $highlighted = replaceRE "class=\"nx\"([^<]+)</span>:" "class=\"na\"$1</span>:" $highlighted -}}
+{{- $parameterPattern := "(<span class=\"p\">\\(</span>)<span class=\"na\">([^<]+)</span>" -}}
+{{- $highlighted = replaceRE $parameterPattern "$1<span class=\"n\">$2</span>" $highlighted -}}
+{{- $memberPattern := "(<span class=\"p\">\\.</span>)<span class=\"nx\"" -}}
+{{- replaceRE $memberPattern "$1<span class=\"na\"" $highlighted | safeHTML -}}

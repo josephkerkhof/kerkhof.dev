@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Restyled syntax highlighting with the Islands Dark palette used by the author's editors, including semantic TypeScript tokens and language-aware function and method calls.
 - Reduced the size of top-level page headings.
 - Based the homepage experience duration on the start of the Clockwork role in March 2019.
 

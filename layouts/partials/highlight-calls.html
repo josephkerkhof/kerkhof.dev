@@ -1,0 +1,4 @@
+{{- $result := transform.HighlightCodeBlock .context -}}
+{{- $pattern := printf "class=\"(%s)\"([^<]+)</span><span class=\"p\">\\(" .classes -}}
+{{- $replacement := "class=\"nf\"$2</span><span class=\"p\">(" -}}
+{{- replaceRE $pattern $replacement $result.Wrapped | safeHTML -}}

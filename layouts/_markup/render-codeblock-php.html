@@ -1,0 +1,14 @@
+{{- $result := transform.HighlightCodeBlock . -}}
+{{- $highlighted := $result.Wrapped -}}
+{{- $keywordPattern := "class=\"nx\">(fn|readonly)</span>" -}}
+{{- $keywordReplacement := "class=\"k\">$1</span>" -}}
+{{- $highlighted = replaceRE $keywordPattern $keywordReplacement $highlighted -}}
+{{- $functionPattern := "class=\"nx\"([^<]+)</span><span class=\"p\">\\(" -}}
+{{- $functionReplacement := "class=\"nf\"$1</span><span class=\"p\">(" -}}
+{{- $highlighted = replaceRE $functionPattern $functionReplacement $highlighted -}}
+{{- $methodPattern := "class=\"na\"([^<]+)</span><span class=\"p\">\\(" -}}
+{{- $methodReplacement := "class=\"nf\"$1</span><span class=\"p\">(" -}}
+{{- $highlighted = replaceRE $methodPattern $methodReplacement $highlighted -}}
+{{- $argumentPattern := "class=\"nx\"([^<]+)</span><span class=\"o\">:</span>" -}}
+{{- $argumentReplacement := "class=\"na\"$1</span><span class=\"o\">:</span>" -}}
+{{- replaceRE $argumentPattern $argumentReplacement $highlighted | safeHTML -}}
