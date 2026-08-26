@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added an automatically generated, human-readable sitemap.
+- Restored the GPG public key and encrypted-email instructions on the contact page.
 
 ### Changed
 
