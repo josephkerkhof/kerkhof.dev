@@ -1,3 +1,4 @@
+{{- $siteURL := urls.Parse .Site.BaseURL -}}
 <header class="site-header shell">
   <div class="letterhead">
     <a class="wordmark" href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
@@ -5,7 +6,9 @@
       <ul class="site-nav">
         {{ range .Site.Menus.main }}
           {{ $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
-          <li><a href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+          {{ $url := urls.Parse .URL }}
+          {{ $external := and $url.Host (ne $url.Host $siteURL.Host) (ne .URL $.Site.Home.Params.resume) }}
+          <li><a href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Name }}</a></li>
         {{ end }}
       </ul>
     </nav>
