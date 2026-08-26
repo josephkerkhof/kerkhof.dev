@@ -3,7 +3,8 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <h1 id="hero-title">{{ .Params.heroTitle }}</h1>
-        <p class="lede">{{ .Params.lede }}</p>
+        {{ $experienceYears := div (sub now.Unix (time "2019-03-01").Unix) 31557600 }}
+        <p class="lede">{{ printf .Params.lede $experienceYears }}</p>
         <div class="actions">
           <a class="button" href="{{ .Params.resume }}">View resume</a>
           <a class="button external-link" href="mailto:{{ .Site.Params.author.email }}">Send an email</a>

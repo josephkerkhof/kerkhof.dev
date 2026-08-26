@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Reduced the size of top-level page headings.
+- Based the homepage experience duration on the start of the Clockwork role in March 2019.
 
 ## [1.0.2] - 2026-08-26
 
