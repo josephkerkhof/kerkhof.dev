@@ -1,9 +1,7 @@
 baseURL = 'https://kerkhof.dev/'
-languageCode = 'en-us'
+locale = 'en-US'
 title = "Joseph Kerkhof"
-theme = "archie"
 canonifyURLs = true
-subtitle = ""
 
 pygmentsstyle = "monokai"
 pygmentscodefences = true
@@ -16,9 +14,8 @@ enableRobotsTXT = true
 pagerSize = 4
 
 [params]
-	mode="toggle"
-	useCDN=false
-	subtitle = ""
+	description = "Joseph Kerkhof is a senior backend engineer specializing in PHP, Laravel, distributed architectures, AI workflows, and cloud systems."
+	mainSections = ["posts"]
 
 [params.author]
     name = "Joseph Kerkhof"
@@ -26,9 +23,9 @@ pagerSize = 4
     github = "josephkerkhof"
 
 [[params.social]]
-    name = "Twitter"
+    name = "X"
     icon = "twitter"
-    url = "https://twitter.com/josephkerkhof"
+    url = "https://x.com/josephkerkhof"
 [[params.social]]
     name = "LinkedIn"
     icon = "linkedin"

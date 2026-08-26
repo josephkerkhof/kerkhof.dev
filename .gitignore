@@ -14,3 +14,6 @@ hugo.linux
 
 # IntelliJ IDEA files
 .idea/
+
+# macOS metadata
+.DS_Store

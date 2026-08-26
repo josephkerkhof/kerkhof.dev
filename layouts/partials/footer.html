@@ -1,22 +1,14 @@
-<footer>
-  <div style="display:flex">
-    {{- range $index, $key := .Site.Params.Social -}}
-    <a class="soc" href="{{ $key.url }}" rel="me" title="{{ $key.name }}"><i data-feather="{{ $key.icon }}"></i></a>
-    <a class="border"></a>
-    {{- end -}}
-  </div>
-  <div class="footer-info">
-    {{ dateFormat "2006" now }} {{ with .Site.Copyright }} {{ . }} | {{ end }}
+<footer class="site-footer shell">
+  <div class="colophon">
+    <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}</p>
+    <nav aria-label="Social links">
+      <ul class="social-links">
+        {{ range .Site.Params.social }}
+        <li><a href="{{ .url }}" rel="me">{{ .name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
   </div>
 </footer>
-{{ if not hugo.IsServer }}
-{{ with site.Config.Services.GoogleAnalytics.ID }}
-{{ template "_internal/google_analytics.html" $ }}
-{{ end }}
-{{ end }}
-
-{{- if (isset .Site.Params "social") -}}
-<script>
-  feather.replace()
-</script>
-{{- end -}}
+{{ if not hugo.IsServer }} {{ with site.Config.Services.GoogleAnalytics.ID }}{{
+template "_internal/google_analytics.html" $ }}{{ end }} {{ end }}

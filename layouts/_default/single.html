@@ -1,42 +1,30 @@
 {{ define "main" }}
-<main>
-	<article>
-		<div class="title">
-			<h1 class="title">{{ .Title }}</h1>
-			<div class="meta">{{ if not .Date.IsZero }}Posted on {{ dateFormat "Jan 2, 2006" .Date }}{{ end }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</div>
-		</div>
-		{{ if isset .Params "tldr" }}
-		<div class="tldr">
-			<strong>tl;dr:</strong>
-			{{ .Params.tldr }}
-		</div>{{ end }}
+  <main id="main-content" class="shell page-shell">
+    <article class="article">
+      <header class="article-header">
+        <h1>{{ .Title }}</h1>
+        {{ if not .Date.IsZero }}
+          <p class="article-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">Published {{ .Date.Format "2 January 2006" }}</time>
+            {{ if .Draft }} · <strong>Draft</strong>{{ end }}
+          </p>
+        {{ end }}
+      </header>
 
-		<section class="body">
-			{{ .Content }}
-		</section>
+      {{ with .Params.tldr }}<aside class="callout"><strong>In brief:</strong> {{ . }}</aside>{{ end }}
 
-		<div class="post-tags">
-			{{ if ne .Type "page" }}
-			{{ if gt .Params.tags 0 }}
-			<nav class="nav tags">
-				<ul class="tags">
-					{{ range .Params.tags }}
-					<li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
-					{{ end }}
-				</ul>
-			</nav>
-			{{ end }}
-			{{ end }}
-		</div>
-		{{- $.Scratch.Set "isDisqus" true -}}
-		<!-- Check if disqus short name is given -->
-		{{ if not site.Config.Services.Disqus.Shortname }}
-		{{- $.Scratch.Set "isDisqus" false -}}
-		{{ end }}
+      <div class="article-body prose">
+        {{ .Content }}
+      </div>
 
-		{{- if eq ($.Scratch.Get "isDisqus") true -}}
-		{{- partial "disqus.html" . -}}
-		{{- end -}}
-	</article>
-</main>
+      {{ with .GetTerms "tags" }}
+        <footer class="article-footer">
+          <span>Filed under</span>
+          <ul class="tag-list">
+            {{ range . }}<li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>{{ end }}
+          </ul>
+        </footer>
+      {{ end }}
+    </article>
+  </main>
 {{ end }}

@@ -1,26 +1,61 @@
 {{ define "main" }}
-  <main aria-role="main">
-    <header class="homepage-header">
-      <h1>{{ .Title }}</h1>
-      {{ with .Params.subtitle }}
-        <span class="subtitle">{{ . }}</span>
-      {{ end }}
-    </header>
-    <div class="homepage-content">
-      <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
-      {{ .Content }}
-    </div>
-    <h1>Posts</h1>
-    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
-    {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
-    {{ range $paginator.Pages }}
-    <section class="list-item">
-    	<h2 class="title"><a href="{{ .RelPermalink }}">{{.Title}}</a></h2>
-    	<time>{{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</time>
-    	<br>{{ template "partials/pagedescription.html" . }}
-    	<a class="readmore" href="{{ .RelPermalink }}">Read more ⟶</a>
+  <main id="main-content" class="shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">{{ .Params.heroTitle }}</h1>
+        <p class="lede">{{ .Params.lede }}</p>
+        <div class="actions">
+          <a class="button" href="{{ .Params.resume }}">View résumé</a>
+          <a class="button" href="mailto:{{ .Site.Params.author.email }}">Send an email</a>
+        </div>
+        {{ with .Params.subtitle }}<p class="motto"><em>{{ . }}</em></p>{{ end }}
+      </div>
+
+      <aside class="window profile-window" aria-label="Profile details">
+        <div class="window-titlebar">It's me!</div>
+        <div class="window-body">
+          <img class="profile-image" src="{{ .Params.profileImage | relURL }}" alt="{{ .Params.profileAlt }}" width="640" height="640">
+          <dl class="property-sheet">
+            <dt>Role</dt>
+            <dd>Senior backend engineer</dd>
+            <dt>Focus</dt>
+            <dd>AI workflows and distributed systems</dd>
+            <dt>Core stack</dt>
+            <dd>PHP, Laravel, MySQL, Redis</dd>
+            <dt>Cloud</dt>
+            <dd>AWS, Docker, Kubernetes, OpenTelemetry</dd>
+            <dt>Remote since</dt>
+            <dd>2019</dd>
+            <dt>Email</dt>
+            <dd><a href="mailto:{{ .Site.Params.author.email }}">{{ .Site.Params.author.email }}</a></dd>
+            <dt>X</dt>
+            <dd><a href="https://x.com/josephkerkhof">@josephkerkhof</a></dd>
+          </dl>
+        </div>
+      </aside>
     </section>
-    {{ end }}
-    {{ template "partials/paginator.html" . }}
+
+    <section class="doc-section homepage-content prose" aria-label="About Joseph">
+      {{ .Content }}
+    </section>
+
+    <section class="doc-section" aria-labelledby="writing-title">
+      <div class="section-heading">
+        <h2 id="writing-title">Writing</h2>
+        <a href="{{ "/posts/" | relURL }}">All posts</a>
+      </div>
+      <div class="catalogue">
+        {{ range first 4 (where .Site.RegularPages.ByDate.Reverse "Section" "posts") }}
+          <article class="catalogue-entry">
+            <header>
+              <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+            </header>
+            <p>{{ .Summary | plainify | truncate 180 }}</p>
+            <a class="entry-link" href="{{ .RelPermalink }}">Read article</a>
+          </article>
+        {{ end }}
+      </div>
+    </section>
   </main>
 {{ end }}

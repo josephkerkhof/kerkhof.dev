@@ -1,0 +1,19 @@
+{{ define "main" }}
+  <main id="main-content" class="shell page-shell">
+    <header class="page-header">
+      <p class="eyebrow">Tagged</p>
+      <h1>{{ .Title }}</h1>
+    </header>
+    <div class="archive window window--wide">
+      <div class="window-titlebar">{{ .Title }} · Entries</div>
+      <div class="window-body">
+        {{ range .Pages.ByDate.Reverse }}
+          <article class="archive-entry">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          </article>
+        {{ end }}
+      </div>
+    </div>
+  </main>
+{{ end }}

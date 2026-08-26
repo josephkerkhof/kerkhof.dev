@@ -1,27 +1,45 @@
 ---
-title: "Introduction"
+title: "Joseph Kerkhof"
+heroTitle: "Reliable systems, thoughtfully built."
+lede: "I'm Joseph, a senior backend engineer with 7+ years designing secure, reliable web and cloud systems."
 subtitle: "Soli Deo gloria"
-description: "Welcome to my website"
-
+description: "Senior backend engineer specializing in PHP, Laravel, distributed architectures, AI workflows, and cloud systems."
+resume: "https://raw.githubusercontent.com/josephkerkhof/resume/master/Joseph_Kerkhof.pdf"
+profileImage: "/images/profile.webp"
+profileAlt: "Joseph Kerkhof"
 ---
 
-{{< figure src="images/profile.webp" class="text-center" title="It's me!" alt="A profile picture of Joseph Kerkhof" width="200" >}}
-
-Hello, nice to meet you! 👋 I'm Joseph, a backend engineer building scalable systems and solving complex distributed architecture challenges. I am saved by grace thru faith ✝️.
+I specialize in PHP and Laravel, system design, distributed architectures, and backend fundamentals, with hands-on experience in Go, Python, and production AI systems. I am saved by grace through faith.
 
 ## Recent Work
 
-Most recently at Teamworks, building NCAA-compliant payment systems and GM budget management platforms. Previously at Prodege optimizing advertising systems processing millions in ad spend, and at Clockwork leading product development for 50K+ users.
+### Current engagement
+
+I architected a modular Laravel AI platform that automates copywriting and an 11-stage email workflow across five business systems. The platform combines Anthropic-backed orchestrator and specialist agents, persistent multimodal conversations, structured outputs, prompt caching, cost telemetry, and deterministic fallbacks. I also designed its ClickStack/HyperDX observability platform on autoscaling Kubernetes, covering logs, metrics, traces, session replay, alerts, backups, SSO, and recovery.
+
+The delivery pipeline enforces code style, maximum-level PHPStan/Larastan analysis, TypeScript and security checks, and more than 1,500 Pest tests across five layers, with sharded browser tests and atomic releases.
+
+### Teamworks
+
+I delivered a GM budget management product from the ground up in three months, with more than 90% test coverage and daily production deployments. I also helped deliver integrated athlete payment systems in eight months, ahead of the NCAA's July 2025 regulatory deadline, using Domain-Driven Design and CQRS to keep the financial and regulatory logic maintainable. The supporting API achieved sub-second response times through query optimization and asynchronous processing.
+
+### Earlier work
+
+At Prodege, I reduced Google Ads campaign launch time from eight hours to 30 minutes, helped prevent $20K–$30K in monthly wasted spend, and optimized queries on 200GB+ MySQL tables from 45 seconds to under three seconds. At Clockwork, I built products serving 50K+ users, improved response times by 60% on a site handling 100K+ daily requests, and maintained a promotion engine serving 350K+ accounts with 99.9% uptime.
 
 ## Dev Philosophy
 
-I value proven, well-tested tools with strong communities and reliable stability. While I'm not drawn to every new framework, I'm always evaluating technologies that solve real problems effectively. I believe fundamentals matter more than language—clean architecture, comprehensive testing, and maintainable code transfer across any ecosystem.
+I value proven, well-tested tools with strong communities and reliable stability. I evaluate technology by the problems it solves, not its novelty. Fundamentals matter more than language: clear architecture, comprehensive testing, observability, and maintainable code transfer across ecosystems.
 
-Professionally, I've built production systems with PHP/Laravel, and I'm expanding my toolkit with Go and Python. The patterns I use daily are language-agnostic.
+My production work spans REST APIs, MySQL, Redis, AWS, Docker, Kubernetes, distributed tracing, enterprise SSO, and CI/CD. I use DDD, CQRS, microservices, TDD, load testing, and static analysis where they make the system easier to reason about and operate.
 
-At work, I thrive in asynchronous, remote environments. I've been working 100% remotely since 2019, which has honed my ability to communicate clearly and collaborate effectively across distributed teams. Thoughtful documentation, comprehensive PR reviews, and strong async communication are second nature.
+I have worked remotely since 2019. Thoughtful documentation, comprehensive PR reviews, clear asynchronous communication, and practical guidance for other engineers are part of how I deliver software, not separate activities.
 
-It's not just about writing code. I focus on reducing tech debt and ensuring what I build is maintainable, efficient, and scalable. All software degrades without maintenance—that's why a proactive approach is essential.
+I also use Claude Code and OpenCode with repository context, specialized skills, MCP integrations, and automated guardrails to accelerate development without lowering review or quality standards.
+
+## Education
+
+I earned an M.Sc. in Data Science with a 4.00 GPA and a B.Sc. in Computer Science from the University of Wisconsin–Oshkosh.
 
 ## Testimonials
 
@@ -33,4 +51,4 @@ He's also shown a breadth of expertise by inspiring his team as a scrum master, 
 
 ## Let's Connect
 
-I'm exploring backend engineering opportunities where I can apply my expertise in distributed systems, architecture, and performance optimization. Check out my [resume](https://raw.githubusercontent.com/josephkerkhof/resume/master/Joseph_Kerkhof.pdf), browse my [projects](https://github.com/josephkerkhof), or reach out via [email](mailto:joseph@kerkhof.dev).
+For backend engineering, system architecture, or AI platform work, review my [resume](https://raw.githubusercontent.com/josephkerkhof/resume/master/Joseph_Kerkhof.pdf), browse my [projects](https://github.com/josephkerkhof), or reach out via [email](mailto:joseph@kerkhof.dev).

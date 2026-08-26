@@ -1,12 +1,8 @@
 {{ define "main" }}
-  <main aria-role="main">
-    <header>
-      <h1>{{ .Title }}</h1>
-      {{ with .Params.subtitle }}
-        <span class="subtitle">{{ . }}</span>
-      {{ end }}
-    </header>
-    <p>Oops! That link isn't available.</p>
-    <p>Maybe try going <a href="/">home</a> and starting over.</p>
+  <main id="main-content" class="shell page-shell error-page">
+    <p class="error-code">404</p>
+    <h1>Page not found.</h1>
+    <p class="lede">That address does not point to anything in the archive.</p>
+    <a class="button" href="{{ "/" | relURL }}">Return home</a>
   </main>
 {{ end }}
