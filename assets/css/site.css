@@ -43,6 +43,8 @@
   --mono: "Berkeley Mono", "Courier New", Courier, monospace;
   --dither: radial-gradient(var(--ink) 0.8px, transparent 0.8px);
   --double-rule: 3px double var(--ink);
+  --compact-control-padding: 4px 6px;
+  --compact-control-font-size: 0.78rem;
 }
 
 *,
@@ -86,7 +88,8 @@ a {
   text-underline-offset: 3px;
 }
 
-a[target="_blank"]::after {
+a[target="_blank"]::after,
+a.external-link::after {
   display: inline-block;
   width: 0.72em;
   height: 0.72em;
@@ -180,10 +183,10 @@ hr {
 .site-nav a {
   display: flex;
   align-items: center;
-  padding: 4px 6px;
+  padding: var(--compact-control-padding);
   border: 1px solid transparent;
   font-family: var(--mono);
-  font-size: 0.78rem;
+  font-size: var(--compact-control-font-size);
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0.025em;
@@ -270,6 +273,10 @@ h3 {
   letter-spacing: 0.015em;
   line-height: 1.2;
   text-decoration: none;
+}
+
+.actions .button {
+  padding: var(--compact-control-padding);
 }
 
 .button:hover,
@@ -691,10 +698,10 @@ figcaption h4 {
   align-items: stretch;
   border: 1px solid var(--ink);
   font-family: var(--mono);
-  font-size: 0.66rem;
+  font-size: var(--compact-control-font-size);
   font-style: normal;
   letter-spacing: 0.04em;
-  line-height: 1;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
@@ -702,7 +709,7 @@ figcaption h4 {
 .release-stamp strong {
   display: flex;
   align-items: center;
-  padding: 5px 7px 4px;
+  padding: var(--compact-control-padding);
 }
 
 .release-stamp span {
