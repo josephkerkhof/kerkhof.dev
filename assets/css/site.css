@@ -34,6 +34,7 @@
 :root {
   --ink: #0b0b0a;
   --paper: #fffefa;
+  --registration: rgb(11 11 10 / 16%);
   --serif: Georgia, "Times New Roman", Times, serif;
   --mono: "Berkeley Mono", "Courier New", Courier, monospace;
   --dither: radial-gradient(var(--ink) 0.8px, transparent 0.8px);
@@ -122,6 +123,7 @@ video {
   justify-content: space-between;
   gap: 16px 40px;
   padding-block: 48px 18px;
+  border-bottom: 1px dashed var(--registration);
 }
 
 .site-identity {
@@ -154,16 +156,33 @@ video {
   list-style: none;
 }
 
+.site-nav {
+  gap: 8px 10px;
+}
+
 .site-nav a {
-  display: block;
-  padding-block: 5px;
-  font-size: 1.02rem;
-  font-style: italic;
+  display: flex;
+  align-items: center;
+  padding: 4px 6px;
+  border: 1px solid transparent;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-style: normal;
   font-weight: 700;
+  letter-spacing: 0.025em;
+  line-height: 1.2;
+  text-decoration: none;
 }
 
 .site-nav a[aria-current="page"] {
-  text-decoration-thickness: 2px;
+  color: var(--paper);
+  background: var(--ink);
+  border-color: var(--ink);
+  text-decoration: none;
+}
+
+.site-nav a:hover:not([aria-current="page"]) {
+  border-color: var(--ink);
 }
 
 .hero {

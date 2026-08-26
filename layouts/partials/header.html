@@ -1,4 +1,5 @@
 {{- $siteURL := urls.Parse .Site.BaseURL -}}
+{{- $pageURL := urls.Parse .Permalink -}}
 <header class="site-header shell">
   <div class="letterhead">
     <div class="site-identity">
@@ -8,8 +9,11 @@
     <nav aria-label="Primary navigation">
       <ul class="site-nav">
         {{ range .Site.Menus.main }}
-          {{ $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
           {{ $url := urls.Parse .URL }}
+          {{ $menuPath := strings.TrimSuffix "/" $url.Path }}
+          {{ $pagePath := strings.TrimSuffix "/" $pageURL.Path }}
+          {{ $descendant := and (ne $menuPath "") (strings.HasPrefix $pagePath (printf "%s/" $menuPath)) }}
+          {{ $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) (eq $pagePath $menuPath) $descendant }}
           {{ $external := and $url.Host (ne $url.Host $siteURL.Host) (ne .URL $.Site.Home.Params.resume) }}
           <li><a href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Name }}</a></li>
         {{ end }}
