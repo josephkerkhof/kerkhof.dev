@@ -1,0 +1,41 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Changed
+
+- Standardized the sizing of compact controls throughout the site.
+
+## [1.0.1] - 2026-08-26
+
+### Changed
+
+- Standardized divider styles across page sections and lists.
+
+## [1.0.0] - 2026-08-26
+
+### Added
+
+- Added a custom print-inspired design with first-party Hugo layouts and styles.
+- Added active navigation states and visual indicators for external links.
+- Added LinkedIn to the profile links.
+- Added tagged releases with release identifiers in the site footer.
+
+### Changed
+
+- Simplified the home page and renamed the writing section to Musings.
+- Moved the site motto into the global header.
+
+### Removed
+
+- Removed the external Hugo theme dependency.
+- Removed expired GPG contact details.
+
+[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/josephkerkhof/kerkhof.dev/releases/tag/v1.0.0

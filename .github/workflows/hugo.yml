@@ -41,6 +41,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Verify changelog entry
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          version="${RELEASE_TAG#v}"
+          grep -Fq "## [$version] - " CHANGELOG.md
       - name: Resolve release identifier
         run: echo "HUGO_PARAMS_RELEASE=$(git describe --tags --always --dirty)" >> "$GITHUB_ENV"
       - name: Setup Pages

@@ -21,12 +21,17 @@ commands fall back to `UNRELEASED` unless `HUGO_PARAMS_RELEASE` is set.
 
 ## Releases
 
-Deploy the site by tagging and pushing a commit:
+Add notable changes to the `Unreleased` section of `CHANGELOG.md`. Cut a
+release and deploy it with:
 
 ```bash
-git tag v1.0.0
-git push origin v1.0.0
+make release VERSION=1.0.2
+git push origin HEAD v1.0.2
 ```
+
+The release command requires a clean working tree. It dates the `Unreleased`
+section, commits the changelog, and creates an annotated tag. Pushing that
+commit and tag triggers the deployment workflow.
 
 Builds between releases use Git's descriptive form, such as
 `v1.0.0-2-gb2544f5`.
