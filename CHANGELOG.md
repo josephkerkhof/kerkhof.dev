@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added an automatically generated, human-readable sitemap.
 
+### Changed
+
+- Reduced the size of top-level page headings.
+
 ## [1.0.2] - 2026-08-26
 
 ### Changed
