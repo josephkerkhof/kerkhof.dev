@@ -2,9 +2,9 @@
 name: Deploy Hugo site to Pages
 
 on:
-  # Runs on pushes targeting the default branch
+  # Releases are deployed only when a tag is pushed.
   push:
-    branches: ["master"]
+    tags: ["*"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -39,6 +39,10 @@ jobs:
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Resolve release identifier
+        run: echo "HUGO_PARAMS_RELEASE=$(git describe --tags --always --dirty)" >> "$GITHUB_ENV"
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
