@@ -30,7 +30,7 @@ pagerSize = 4
 [[params.social]]
     name = "LinkedIn"
     icon = "linkedin"
-    url = "https://www.linkedin.com/in/josephkerkhof"
+    url = "https://www.linkedin.com/in/josephkerkhof/"
 [[params.social]]
     name = "GitHub"
     icon = "github"
