@@ -620,6 +620,10 @@ pre code {
   color: #56a8f5;
 }
 
+.chroma code:is(.language-sql, .language-postgresql) .nf {
+  font-style: italic;
+}
+
 .chroma .nc,
 .chroma .nn,
 .chroma .nt,
@@ -628,7 +632,8 @@ pre code {
 }
 
 .chroma .na,
-.chroma .py {
+.chroma .py,
+.chroma code:is(.language-sql, .language-postgresql) .n + .p + .n {
   color: #c77dbb;
 }
 
