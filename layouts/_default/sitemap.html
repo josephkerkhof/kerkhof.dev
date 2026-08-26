@@ -1,0 +1,59 @@
+{{ define "main" }} {{ $currentPage := . }} {{ $standalonePages := where
+.Site.RegularPages "Section" "" }} {{ $sections := where .Site.Sections "Pages"
+"ne" nil }}
+
+<main id="main-content" class="shell page-shell sitemap-page">
+  <header class="page-header">
+    <p class="eyebrow">Index</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}
+    <p class="lede">{{ . }}</p>
+    {{ end }}
+  </header>
+
+  <div class="sitemap window window--wide">
+    <div class="window-titlebar">{{ .Site.Title }} · Site index</div>
+    <div class="window-body">
+      <ul class="sitemap-list">
+        <li><a href="{{ .Site.Home.RelPermalink }}">Home</a></li>
+        {{ range $standalonePages.ByLinkTitle }} {{ if and (ne .RelPermalink
+        $currentPage.RelPermalink) (not .Params.sitemap.exclude) }}
+        <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+        {{ end }} {{ end }} {{ range $sections.ByLinkTitle }} {{ if and (gt (len
+        .RegularPagesRecursive) 0) (not .Params.sitemap.exclude) }}
+        <li>
+          <a href="{{ .RelPermalink }}"
+            >{{ if eq .Section "posts" }}All posts{{ else }}{{ .LinkTitle }}{{
+            end }}</a
+          >
+          <ul>
+            {{ range .RegularPagesRecursive.ByLinkTitle }} {{ if not
+            .Params.sitemap.exclude }}
+            <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+            {{ end }} {{ end }}
+          </ul>
+        </li>
+        {{ end }} {{ end }} {{ range $taxonomyName, $taxonomy :=
+        .Site.Taxonomies }} {{ with site.GetPage (printf "/%s" $taxonomyName) }}
+        {{ if and (gt (len $taxonomy) 0) (not .Params.sitemap.exclude) }}
+        <li>
+          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+          <ul>
+            {{ range $taxonomy.ByCount }}
+            <li>
+              <a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a>
+            </li>
+            {{ end }}
+          </ul>
+        </li>
+        {{ end }} {{ end }} {{ end }}
+        <li>
+          <a href="{{ $currentPage.RelPermalink }}" aria-current="page"
+            >{{ $currentPage.LinkTitle }}</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>
+{{ end }}

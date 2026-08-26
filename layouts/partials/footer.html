@@ -12,8 +12,9 @@ hugo.IsProduction "PROD" "DEV" -}}
       </p>
       <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}</p>
     </div>
-    <nav aria-label="Social links">
+    <nav aria-label="Footer links">
       <ul class="social-links">
+        <li><a href="/sitemap/">Sitemap</a></li>
         {{ range .Site.Params.social }} {{ $url := urls.Parse (printf "%s" .url)
         }} {{ $external := and $url.Host (ne $url.Host $siteURL.Host) }}
         <li>
