@@ -1,7 +1,17 @@
-{{- $siteURL := urls.Parse .Site.BaseURL -}}
+{{- $siteURL := urls.Parse .Site.BaseURL -}} {{- $release :=
+.Site.Params.release | default "UNRELEASED" -}} {{- $environment := cond
+hugo.IsProduction "PROD" "DEV" -}}
 <footer class="site-footer shell">
   <div class="colophon">
-    <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}</p>
+    <div class="colophon-meta">
+      <p
+        class="release-stamp release-stamp--{{ $environment | lower }}"
+        aria-label="{{ $environment }} revision {{ $release }}"
+      >
+        <span>{{ $environment }}</span><strong>{{ $release }}</strong>
+      </p>
+      <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}</p>
+    </div>
     <nav aria-label="Social links">
       <ul class="social-links">
         {{ range .Site.Params.social }} {{ $url := urls.Parse (printf "%s" .url)

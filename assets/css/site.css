@@ -34,7 +34,11 @@
 :root {
   --ink: #0b0b0a;
   --paper: #fffefa;
+  --desk: #e9e8e3;
+  --paper-edge: #aaa9a3;
   --registration: rgb(11 11 10 / 16%);
+  --status-green: #1d6b52;
+  --status-yellow: #e0bd22;
   --serif: Georgia, "Times New Roman", Times, serif;
   --mono: "Berkeley Mono", "Courier New", Courier, monospace;
   --dither: radial-gradient(var(--ink) 0.8px, transparent 0.8px);
@@ -48,7 +52,7 @@
 
 html {
   color: var(--ink);
-  background: var(--paper);
+  background: var(--desk);
   font-family: var(--serif);
   font-size: 18px;
   line-height: 1.55;
@@ -56,7 +60,13 @@ html {
 }
 
 body {
-  margin: 0;
+  position: relative;
+  width: min(calc(100% - 40px), 1280px);
+  min-height: calc(100vh - 40px);
+  margin: 20px auto;
+  background: var(--paper);
+  border: 1px solid var(--paper-edge);
+  box-shadow: 3px 3px 0 rgb(11 11 10 / 12%);
   overflow-x: hidden;
 }
 
@@ -246,7 +256,11 @@ h3 {
   color: var(--ink);
   background: var(--paper);
   border: 1px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--paper-edge);
+  font-family: var(--mono);
+  font-size: 0.78rem;
   font-weight: 700;
+  letter-spacing: 0.015em;
   line-height: 1.2;
   text-decoration: none;
 }
@@ -255,6 +269,7 @@ h3 {
 .button:focus-visible {
   color: var(--paper);
   background: var(--ink);
+  box-shadow: 2px 2px 0 var(--paper-edge);
 }
 
 .window {
@@ -657,6 +672,51 @@ figcaption h4 {
   margin: 0;
 }
 
+.colophon-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.release-stamp {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid var(--ink);
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  font-style: normal;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.release-stamp span,
+.release-stamp strong {
+  display: flex;
+  align-items: center;
+  padding: 5px 7px 4px;
+}
+
+.release-stamp span {
+  border-right: 1px solid var(--ink);
+  letter-spacing: 0.12em;
+}
+
+.release-stamp--dev span {
+  color: var(--ink);
+  background: var(--status-yellow);
+}
+
+.release-stamp--prod span {
+  color: var(--paper);
+  background: var(--status-green);
+}
+
+.release-stamp strong {
+  font-weight: 400;
+}
+
 .social-links {
   gap: 8px 18px;
 }
@@ -689,7 +749,16 @@ figcaption h4 {
 
 @media (max-width: 640px) {
   html {
+    background: var(--paper);
     font-size: 17px;
+  }
+
+  body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    border: 0;
+    box-shadow: none;
   }
 
   .shell {
@@ -746,6 +815,18 @@ figcaption h4 {
 }
 
 @media print {
+  html {
+    background: #fff;
+  }
+
+  body {
+    width: 100%;
+    min-height: auto;
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+  }
+
   .site-nav,
   .skip-link,
   .actions,
