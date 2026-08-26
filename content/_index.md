@@ -37,10 +37,6 @@ I have worked remotely since 2019. Thoughtful documentation, comprehensive PR re
 
 I also use Claude Code and OpenCode with repository context, specialized skills, MCP integrations, and automated guardrails to accelerate development without lowering review or quality standards.
 
-## Education
-
-I earned an M.Sc. in Data Science with a 4.00 GPA and a B.Sc. in Computer Science from the University of Wisconsin–Oshkosh.
-
 ## Testimonials
 
 "Today is Joseph's two-year anniversary with Clockwork. In that time, I've seen him excel as a software engineer. He's demonstrated a depth of expertise in LAMP stack web application development, content management systems (Craft, Drupal, WordPress), and building out a series of job portals on PageUp.
@@ -48,7 +44,3 @@ I earned an M.Sc. in Data Science with a 4.00 GPA and a B.Sc. in Computer Scienc
 He's also shown a breadth of expertise by inspiring his team as a scrum master, teaching machine learning to other engineers, and most recently, leading a migration from Salesforce Pardot to HubSpot. Joseph sets an outstanding example for his peers and it's not a surprise why they love working with him. Thank you Joseph for all your contributions these past two years!"
 
 \- Vince Cabansag (2021), COO @ [Clockwork](https://www.clockwork.com)
-
-## Let's Connect
-
-For backend engineering, system architecture, or AI platform work, review my [resume](https://raw.githubusercontent.com/josephkerkhof/resume/master/Joseph_Kerkhof.pdf), browse my [projects](https://github.com/josephkerkhof), or reach out via [email](mailto:joseph@kerkhof.dev).
