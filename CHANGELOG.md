@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Restyled the footer release indicator to better match the site's editorial colophon.
+
 ## [1.0.5] - 2026-08-26
 
 ### Fixed

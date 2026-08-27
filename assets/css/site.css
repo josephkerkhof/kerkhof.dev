@@ -886,40 +886,47 @@ figcaption h4 {
 
 .release-stamp {
   display: inline-flex;
-  align-items: stretch;
-  border: 1px solid var(--ink);
+  align-items: center;
+  gap: 0.5em;
   font-family: var(--mono);
-  font-size: var(--compact-control-font-size);
+  font-size: 0.72rem;
   font-style: normal;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   line-height: 1.2;
   text-transform: uppercase;
 }
 
-.release-stamp span,
-.release-stamp strong {
-  display: flex;
-  align-items: center;
-  padding: var(--compact-control-padding);
-}
-
 .release-stamp span {
-  border-right: 1px solid var(--ink);
-  letter-spacing: 0.12em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55em;
 }
 
-.release-stamp--dev span {
-  color: var(--ink);
+.release-stamp span::before {
+  width: 0.62em;
+  height: 0.62em;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  content: "";
+}
+
+.release-stamp--local span::before {
   background: var(--status-yellow);
 }
 
-.release-stamp--prod span {
-  color: var(--paper);
+.release-stamp--production span::before {
   background: var(--status-green);
 }
 
 .release-stamp strong {
+  display: inline-flex;
+  gap: 0.5em;
   font-weight: 400;
+}
+
+.release-stamp strong::before {
+  color: var(--paper-edge);
+  content: "/";
 }
 
 .social-links {
