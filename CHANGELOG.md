@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.6] - 2026-08-26
+
 ### Changed
 
 - Restyled the footer release indicator to better match the site's editorial colophon.
@@ -67,7 +69,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed the external Hugo theme dependency.
 - Removed expired GPG contact details.
 
-[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.5...HEAD
+[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.6...HEAD
+[1.0.6]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.5...v1.0.6
 [1.0.5]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.4...v1.0.5
 [1.0.4]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.2...v1.0.3
