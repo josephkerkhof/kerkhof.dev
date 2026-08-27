@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Updated the GitHub Pages workflow actions to their Node.js 24-compatible releases.
+
 ## [1.0.8] - 2026-08-26
 
 ### Added
