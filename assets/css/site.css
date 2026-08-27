@@ -844,6 +844,93 @@ figcaption h4 {
   text-decoration-thickness: 2px;
 }
 
+.reaction-introduction {
+  margin-bottom: 30px;
+}
+
+.reaction-register {
+  max-width: 1100px;
+}
+
+.reaction-notice {
+  margin: 0;
+  padding: 9px 12px;
+  background-image: var(--dither);
+  background-size: 3px 3px;
+  border-bottom: 1px solid var(--ink);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+}
+
+.reaction-notice strong {
+  padding: 2px 4px;
+  color: var(--paper);
+  background: var(--ink);
+  text-transform: uppercase;
+}
+
+.reaction-table-wrap {
+  overflow-x: auto;
+}
+
+.reaction-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+}
+
+.reaction-table caption {
+  padding: 9px 12px;
+  border-top: 1px solid var(--ink);
+  caption-side: bottom;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  text-align: left;
+}
+
+.reaction-table th,
+.reaction-table td {
+  padding: 14px 16px;
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.reaction-table th {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.reaction-table th:last-child,
+.reaction-table td:last-child {
+  border-right: 0;
+}
+
+.reaction-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.reaction-table code {
+  white-space: nowrap;
+}
+
+.reaction-specimen {
+  width: 150px;
+  font-size: 3.4rem;
+  line-height: 1;
+  text-align: center !important;
+}
+
+.reaction-specimen img {
+  width: 88px;
+  max-height: 88px;
+  margin-inline: auto;
+  object-fit: contain;
+}
+
 .error-page {
   min-height: 52vh;
 }

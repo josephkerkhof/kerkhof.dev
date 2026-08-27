@@ -1,0 +1,13 @@
+{{ $page := .page }}
+<ul{{ if .root }} class="sitemap-list"{{ end }}>
+  {{ range $page.Pages.ByLinkTitle }} {{ if not .Params.sitemap.exclude }}
+  <li>
+    <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+    {{ if and .IsSection (gt (len .Pages) 0) }} {{ partial "fun-tree.html" (dict
+    "page" . "root" false) }}
+    {{ end }}
+  </li>
+  {{ end }} {{ else }}
+  <li>No curiosities have been catalogued yet.</li>
+  {{ end }}
+</ul>

@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added a Fun section and a whimsical Slack reaction register for small personal collections.
+
 ## [1.0.4] - 2026-08-26
 
 ### Changed

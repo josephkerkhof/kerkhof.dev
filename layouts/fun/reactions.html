@@ -1,0 +1,62 @@
+{{ define "main" }}
+<main id="main-content" class="shell page-shell reaction-page">
+  <header class="page-header">
+    <p class="eyebrow">Specimen register</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}
+    <p class="lede">{{ . }}</p>
+    {{ end }}
+  </header>
+
+  <div class="reaction-introduction prose">{{ .Content }}</div>
+
+  <div class="reaction-register window">
+    <div class="window-titlebar">
+      {{ .Title }} · {{ len .Params.reactions }} records
+    </div>
+    {{ if .Params.temporary }}
+    <p class="reaction-notice">
+      <strong>Status:</strong> Temporary loan collection
+    </p>
+    {{ end }}
+    <div
+      class="reaction-table-wrap"
+      role="region"
+      aria-label="Slack reaction register table"
+      tabindex="0"
+    >
+      <table class="reaction-table">
+        <caption>
+          Slack reaction specimens and their approved interpretations
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Specimen</th>
+            <th scope="col">Slack code</th>
+            <th scope="col">Field notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ $page := . }} {{ range .Params.reactions }} {{ $reaction := . }}
+          <tr>
+            <td class="reaction-specimen">
+              {{ if .image }} {{ with $page.Resources.GetMatch .image }}
+              <img
+                src="{{ .RelPermalink }}"
+                alt="{{ $reaction.name }}"
+                loading="lazy"
+              />
+              {{ end }} {{ else }}
+              <span role="img" aria-label="{{ .name }}">{{ .specimen }}</span>
+              {{ end }}
+            </td>
+            <td><code>{{ .shortcode }}</code></td>
+            <td>{{ .fieldNote }}</td>
+          </tr>
+          {{ end }}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+{{ end }}
