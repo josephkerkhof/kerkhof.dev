@@ -1,7 +1,6 @@
 {{ define "main" }}
 <main id="main-content" class="shell page-shell fun-page">
   <header class="page-header">
-    <p class="eyebrow">Diversions</p>
     <h1>{{ .Title }}</h1>
     {{ with .Description }}
     <p class="lede">{{ . }}</p>
@@ -9,7 +8,7 @@
   </header>
 
   <div class="sitemap fun-index window window--wide">
-    <div class="window-titlebar">{{ .Title }} · Cabinet index</div>
+    <div class="window-titlebar">go on. click it. you know you want to.</div>
     <div class="window-body">
       {{ partial "fun-tree.html" (dict "page" . "root" true) }}
     </div>

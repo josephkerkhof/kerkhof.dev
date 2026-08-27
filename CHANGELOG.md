@@ -10,6 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added a Fun section and a whimsical Slack reaction register for small personal collections.
+- Added a downloadable collection of animated and static custom Slack reactions.
+
+### Changed
+
+- Redesigned the Slack reaction register as a classic HTML specimen grid.
 
 ## [1.0.7] - 2026-08-26
 

@@ -1,7 +1,6 @@
 {{ define "main" }}
 <main id="main-content" class="shell page-shell reaction-page">
   <header class="page-header">
-    <p class="eyebrow">Specimen register</p>
     <h1>{{ .Title }}</h1>
     {{ with .Description }}
     <p class="lede">{{ . }}</p>
@@ -10,15 +9,9 @@
 
   <div class="reaction-introduction prose">{{ .Content }}</div>
 
-  <div class="reaction-register window">
-    <div class="window-titlebar">
-      {{ .Title }} · {{ len .Params.reactions }} records
-    </div>
-    {{ if .Params.temporary }}
-    <p class="reaction-notice">
-      <strong>Status:</strong> Temporary loan collection
-    </p>
-    {{ end }}
+  {{ $resources := sort (.Resources.ByType "image") "Name" }} {{ $missingCells
+  := mod (sub 5 (mod (len $resources) 5)) 5 }}
+  <div class="reaction-register">
     <div
       class="reaction-table-wrap"
       role="region"
@@ -27,33 +20,44 @@
     >
       <table class="reaction-table">
         <caption>
-          Slack reaction specimens and their approved interpretations
+          Captain Kirk is climbing a mountain,
+          <a
+            href="https://www.youtube.com/watch?v=HU2ftCitvyQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            >why is he climbing a mountain</a
+          >?
         </caption>
-        <thead>
-          <tr>
-            <th scope="col">Specimen</th>
-            <th scope="col">Slack code</th>
-            <th scope="col">Field notes</th>
-          </tr>
-        </thead>
         <tbody>
-          {{ $page := . }} {{ range .Params.reactions }} {{ $reaction := . }}
           <tr>
+            {{ range $resources }} {{ $filename := path.Base .Name }} {{ $slug
+            := strings.TrimSuffix (path.Ext $filename) $filename }} {{ $name :=
+            $slug | replaceRE "[-_]+" " " | strings.FirstUpper }} {{ $shortcode
+            := $slug | replaceRE "[-]+" "_" }}
             <td class="reaction-specimen">
-              {{ if .image }} {{ with $page.Resources.GetMatch .image }}
-              <img
-                src="{{ .RelPermalink }}"
-                alt="{{ $reaction.name }}"
-                loading="lazy"
-              />
-              {{ end }} {{ else }}
-              <span role="img" aria-label="{{ .name }}">{{ .specimen }}</span>
-              {{ end }}
+              <a
+                class="reaction-image"
+                href="{{ .RelPermalink }}"
+                download="{{ $filename }}"
+                aria-label="Download {{ $name }}"
+              >
+                <img
+                  src="{{ .RelPermalink }}"
+                  alt="{{ $name }} Slack reaction"
+                  loading="lazy"
+                />
+              </a>
+              <div class="reaction-label">
+                <code>:{{ $shortcode }}:</code>
+              </div>
             </td>
-            <td><code>{{ .shortcode }}</code></td>
-            <td>{{ .fieldNote }}</td>
+            {{ end }} {{ if gt $missingCells 0 }} {{ range seq $missingCells }}
+            <td
+              class="reaction-specimen reaction-specimen--empty"
+              aria-hidden="true"
+            ></td>
+            {{ end }} {{ end }}
           </tr>
-          {{ end }}
         </tbody>
       </table>
     </div>

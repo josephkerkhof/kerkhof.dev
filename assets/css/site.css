@@ -844,91 +844,89 @@ figcaption h4 {
   text-decoration-thickness: 2px;
 }
 
-.reaction-introduction {
-  margin-bottom: 30px;
-}
-
 .reaction-register {
-  max-width: 1100px;
+  max-width: 1120px;
 }
 
-.reaction-notice {
-  margin: 0;
-  padding: 9px 12px;
-  background-image: var(--dither);
-  background-size: 3px 3px;
-  border-bottom: 1px solid var(--ink);
-  font-family: var(--mono);
-  font-size: 0.72rem;
-}
-
-.reaction-notice strong {
-  padding: 2px 4px;
-  color: var(--paper);
-  background: var(--ink);
-  text-transform: uppercase;
+.reaction-introduction {
+  margin-bottom: 28px;
 }
 
 .reaction-table-wrap {
-  overflow-x: auto;
+  overflow: hidden;
 }
 
 .reaction-table {
   width: 100%;
-  min-width: 680px;
+  border: 0;
   border-collapse: collapse;
 }
 
 .reaction-table caption {
-  padding: 9px 12px;
-  border-top: 1px solid var(--ink);
+  padding: 7px 0;
   caption-side: bottom;
   font-family: var(--mono);
-  font-size: 0.68rem;
+  font-size: 0.66rem;
   text-align: left;
 }
 
-.reaction-table th,
-.reaction-table td {
-  padding: 14px 16px;
+.reaction-table tbody {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   border-right: 1px solid var(--ink);
   border-bottom: 1px solid var(--ink);
-  text-align: left;
-  vertical-align: middle;
 }
 
-.reaction-table th {
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+.reaction-table tr {
+  display: contents;
 }
 
-.reaction-table th:last-child,
-.reaction-table td:last-child {
-  border-right: 0;
-}
-
-.reaction-table tbody tr:last-child td {
-  border-bottom: 0;
-}
-
-.reaction-table code {
-  white-space: nowrap;
+.reaction-table td {
+  display: flex;
+  min-width: 0;
+  padding: 10px 8px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 0;
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+  text-align: center;
 }
 
 .reaction-specimen {
-  width: 150px;
-  font-size: 3.4rem;
-  line-height: 1;
-  text-align: center !important;
+  height: 140px;
 }
 
-.reaction-specimen img {
-  width: 88px;
-  max-height: 88px;
+.reaction-specimen--empty {
+  pointer-events: none;
+}
+
+.reaction-image {
+  display: grid;
+  min-height: 82px;
+  place-items: center;
+  color: inherit;
+  font-size: 4.2rem;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.reaction-image img {
+  width: 72px;
+  max-height: 72px;
   margin-inline: auto;
   object-fit: contain;
+}
+
+.reaction-label {
+  margin-top: 8px;
+}
+
+.reaction-label code {
+  display: block;
+  font-size: 0.58rem;
+  overflow-wrap: anywhere;
 }
 
 .error-page {
@@ -1044,6 +1042,10 @@ figcaption h4 {
   .site-footer {
     margin-top: 100px;
   }
+
+  .reaction-table tbody {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 640px) {
@@ -1118,6 +1120,10 @@ figcaption h4 {
 
   .section-heading {
     align-items: flex-start;
+  }
+
+  .reaction-table td {
+    padding-inline: 10px;
   }
 }
 
