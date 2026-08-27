@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.9] - 2026-08-27
+
 ### Changed
 
 - Updated the GitHub Pages workflow actions to their Node.js 24-compatible releases.
@@ -90,7 +92,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed the external Hugo theme dependency.
 - Removed expired GPG contact details.
 
-[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.8...HEAD
+[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.9...HEAD
+[1.0.9]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.8...v1.0.9
 [1.0.8]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.7...v1.0.8
 [1.0.7]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.6...v1.0.7
 [1.0.6]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.5...v1.0.6
