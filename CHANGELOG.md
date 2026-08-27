@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Replaced the path-finding videos with broadly compatible MP4 files and ensured Pages deploys their Git LFS contents instead of pointer files.
+
 ## [1.0.6] - 2026-08-26
 
 ### Changed
