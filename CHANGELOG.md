@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Limited the main RSS feed to posts, excluding standalone pages such as the sitemap and contact page.
+
 ## [1.0.4] - 2026-08-26
 
 ### Changed
