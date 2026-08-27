@@ -11,6 +11,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added a Fun section and a whimsical Slack reaction register for small personal collections.
 
+## [1.0.7] - 2026-08-26
+
+### Fixed
+
+- Replaced the path-finding videos with broadly compatible MP4 files and ensured Pages deploys their Git LFS contents instead of pointer files.
+
+## [1.0.6] - 2026-08-26
+
+### Changed
+
+- Restyled the footer release indicator to better match the site's editorial colophon.
+
+## [1.0.5] - 2026-08-26
+
+### Fixed
+
+- Limited the main RSS feed to posts, excluding standalone pages such as the sitemap and contact page.
+
 ## [1.0.4] - 2026-08-26
 
 ### Changed
@@ -61,7 +79,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed the external Hugo theme dependency.
 - Removed expired GPG contact details.
 
-[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.4...HEAD
+[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.7...HEAD
+[1.0.7]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.6...v1.0.7
+[1.0.6]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.5...v1.0.6
+[1.0.5]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.4...v1.0.5
 [1.0.4]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.2...v1.0.3
 [1.0.2]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.1...v1.0.2

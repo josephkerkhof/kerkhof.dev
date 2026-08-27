@@ -1,6 +1,6 @@
 {{- $siteURL := urls.Parse .Site.BaseURL -}} {{- $release :=
 .Site.Params.release | default "UNRELEASED" -}} {{- $environment := cond
-hugo.IsProduction "PROD" "DEV" -}}
+hugo.IsProduction "Production" "Local" -}}
 <footer class="site-footer shell">
   <div class="colophon">
     <div class="colophon-meta">
