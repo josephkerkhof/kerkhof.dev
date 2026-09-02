@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.13] - 2026-09-02
+
 ### Added
 
 - Added the Martin D-35 used for Sunday church music and a compact photo gallery to the Now page.
@@ -118,7 +120,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed the external Hugo theme dependency.
 - Removed expired GPG contact details.
 
-[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.12...HEAD
+[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.13...HEAD
+[1.0.13]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.12...v1.0.13
 [1.0.12]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.11...v1.0.12
 [1.0.11]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.10...v1.0.11
 [1.0.10]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.9...v1.0.10
