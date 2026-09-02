@@ -9,25 +9,25 @@ I'm in New London, Wisconsin, working remotely and trying to build useful things
 
 ## What I'm working on
 
-Most of my work is in Laravel right now, especially its new AI tooling. I'm building a production platform that coordinates specialized agents and a long-running email workflow across several business systems.
+Most of my work is in Laravel right now, especially its new AI tooling. I'm building a platform that coordinates specialized agents and a long-running email workflow across several business systems.
 
-The fun part isn't getting an AI demo to work. It's getting unpredictable software to behave in production: structured outputs, sensible fallbacks, useful telemetry, lots of tests, and clear boundaries for the humans working on it.
+The satisfying part isn't getting a demo to work; it's making products that meaningfully save time and improve the human experience.
 
 ## Things I'm tinkering with
 
-I'm also figuring out where coding agents are genuinely useful and where they're just making more code to review. My current setup includes Claude Code and OpenCode, repository context, specialized skills, MCP integrations, and enough guardrails to keep things interesting rather than alarming.
+I'm also figuring out where coding agents are genuinely useful and where they're just making more code to review. Right now I am pretty firmly in the "read the code" camp (tho I fully admit this may change in the future). My current setup includes Claude Code and OpenCode, including repository context, specialized skills, MCP integrations, and trying to coerce agents to [do what I want](https://gist.github.com/josephkerkhof/281aecb3dcc983925bcec7d712c632b6).
 
-When I have the time, I bounce between a Laravel meal-planning app with an AI assistant, a private coaching agent that turns my X activity into useful feedback, and a [multiplayer chess experiment](https://github.com/josephkerkhof/chess) (very WIP) that uses Cloudflare Durable Objects. Apparently my idea of taking a break from software is writing different software. I collect the occasional technical note or odd little project on this site.
+In my off time, I'm working on a meal-planning app which agentically makes grocery store orders for you, a private coaching agent that turns my X activity into useful feedback, and a [multiplayer chess experiment](https://github.com/josephkerkhof/chess) (very WIP) that uses Cloudflare Durable Objects. Apparently, my idea of taking a break from software is writing different software. I'll collect the occasional technical note or odd little project on this site.
 
 ## At home
 
-My wife and I live on eight acres with horses and two dogs. We've also spent a lot of time remodeling our 1911 house. More than a century has given it plenty of time to come up with projects for us.
+My wife and I live on eight acres with horses and two dogs. We've also spent a lot of time remodeling our home built in 1911. More than a century has given it plenty of time to come up with projects for us.
 
 ![Our horses at home](horses-at-home.webp)
 
 ## The general direction
 
-I'm still partial to boring tools, clear architecture, good tests, and systems the next person can understand. New technology is fun; reliable technology is more useful.
+I'm still partial to boring (maybe a better word is reliable) tools, clear architecture, good tests, and systems the next person can understand.
 
 My Christian faith anchors how I understand life and work. I trust in God's grace through faith and try to do the work in front of me faithfully.
 
