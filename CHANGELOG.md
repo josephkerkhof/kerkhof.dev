@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added the Martin D-35 used for Sunday church music and a compact photo gallery to the Now page.
+
 ## [1.0.12] - 2026-09-02
 
 ### Changed

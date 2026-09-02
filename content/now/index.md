@@ -25,6 +25,14 @@ My wife and I live on eight acres with horses and two dogs. We've also spent a l
 
 ![Our horses at home](horses-at-home.webp)
 
+## New guitar
+
+I recently picked up a Martin D-35 50th Anniversary Edition. I use it to play on Sundays at my local church. I'm really proud of it and love the sound it makes. Ask me sometime how God blessed me with this instrument; it's a cool story.
+
+![Front of my Martin D-35 50th Anniversary Edition](martin-d35-front.webp) ![Three-piece back of my Martin D-35 50th Anniversary Edition](martin-d35-back.webp)
+
+_Isn't it pretty?_
+
 ## The general direction
 
 I'm still partial to boring (maybe a better word is reliable) tools, clear architecture, good tests, and systems the next person can understand.
