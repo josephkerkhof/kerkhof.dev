@@ -15,6 +15,7 @@ hugo.IsProduction "Production" "Local" -}}
     <nav aria-label="Footer links">
       <ul class="social-links">
         <li><a href="/sitemap/">Sitemap</a></li>
+        <li><a href="/contact/">Contact</a></li>
         {{ range .Site.Params.social }} {{ $url := urls.Parse (printf "%s" .url)
         }} {{ $external := and $url.Host (ne $url.Host $siteURL.Host) }}
         <li>

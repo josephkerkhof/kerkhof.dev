@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added a Now page for current work, interests, and priorities.
+
+### Changed
+
+- Replaced Contact with Now in the primary navigation and moved Contact to the footer.
+
 ## [1.0.10] - 2026-08-27
 
 ### Added

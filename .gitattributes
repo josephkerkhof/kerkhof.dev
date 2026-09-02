@@ -2,3 +2,4 @@ content/posts/path-finding-ai/*.mp4 filter=lfs diff=lfs merge=lfs -text
 content/fun/slack-reactions/images/*.gif filter=lfs diff=lfs merge=lfs -text
 content/fun/slack-reactions/images/*.jpg filter=lfs diff=lfs merge=lfs -text
 content/fun/slack-reactions/images/*.png filter=lfs diff=lfs merge=lfs -text
+content/now/*.webp filter=lfs diff=lfs merge=lfs -text

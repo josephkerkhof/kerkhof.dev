@@ -77,7 +77,7 @@ pagerSize = 4
     weight = 5
 
 [[menu.main]]
-    name = "contact"
-    title = "Contact"
-    url = "/contact"
+    name = "now"
+    title = "Now"
+    url = "/now"
     weight = 6
