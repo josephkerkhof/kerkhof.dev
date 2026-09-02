@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.11] - 2026-09-02
+
 ### Added
 
 - Added a Now page for current work, interests, and priorities.
@@ -106,7 +108,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed the external Hugo theme dependency.
 - Removed expired GPG contact details.
 
-[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.10...HEAD
+[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.11...HEAD
+[1.0.11]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.10...v1.0.11
 [1.0.10]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.9...v1.0.10
 [1.0.9]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.8...v1.0.9
 [1.0.8]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.7...v1.0.8
