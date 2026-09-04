@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.15] - 2026-09-04
+
 ### Added
 
 - Cloudflare Web Analytics beacon, rendered in production builds from
@@ -135,7 +137,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed the external Hugo theme dependency.
 - Removed expired GPG contact details.
 
-[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.14...HEAD
+[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.15...HEAD
+[1.0.15]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.14...v1.0.15
 [1.0.14]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.13...v1.0.14
 [1.0.13]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.12...v1.0.13
 [1.0.12]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.11...v1.0.12
