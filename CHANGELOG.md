@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Migrated production hosting from GitHub Pages to Cloudflare Workers Static Assets and moved Git LFS content media delivery to Cloudflare R2.
+
+### Added
+
+- Added incremental R2 media synchronization, Cloudflare deployment documentation, and baseline security headers.
+
 ## [1.0.13] - 2026-09-02
 
 ### Added

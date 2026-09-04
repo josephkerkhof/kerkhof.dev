@@ -33,16 +33,17 @@
             {{ range $resources }} {{ $filename := path.Base .Name }} {{ $slug
             := strings.TrimSuffix (path.Ext $filename) $filename }} {{ $name :=
             $slug | replaceRE "[-_]+" " " | strings.FirstUpper }} {{ $shortcode
-            := $slug | replaceRE "[-]+" "_" }}
+            := $slug | replaceRE "[-]+" "_" }} {{ $mediaURL := partial
+            "media-url.html" . }}
             <td class="reaction-specimen">
               <a
                 class="reaction-image"
-                href="{{ .RelPermalink }}"
+                href="{{ $mediaURL }}"
                 download="{{ $filename }}"
                 aria-label="Download {{ $name }}"
               >
                 <img
-                  src="{{ .RelPermalink }}"
+                  src="{{ $mediaURL }}"
                   alt="{{ $name }} Slack reaction"
                   loading="lazy"
                 />

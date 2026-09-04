@@ -1,6 +1,10 @@
 ---
 title: "Now"
 description: "What has my attention right now"
+resources:
+  - src: "*.webp"
+    params:
+      r2: true
 ---
 
 _Last updated 2 September 2026._

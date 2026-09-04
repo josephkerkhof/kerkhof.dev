@@ -1,5 +1,4 @@
-# Sample workflow for building and deploying a Hugo site to GitHub Pages
-name: Deploy Hugo site to Pages
+name: Deploy Hugo site to Cloudflare
 
 on:
   # Releases are deployed only when a tag is pushed.
@@ -9,16 +8,13 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
+  group: "production"
   cancel-in-progress: false
 
 # Default to bash
@@ -27,11 +23,13 @@ defaults:
     shell: bash
 
 jobs:
-  # Build job
-  build:
+  deploy:
     runs-on: ubuntu-latest
     env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       HUGO_VERSION: 0.165.0
+      WRANGLER_VERSION: 4.129.0
     steps:
       - name: Install Hugo CLI
         run: |
@@ -51,9 +49,12 @@ jobs:
           grep -Fq "## [$version] - " CHANGELOG.md
       - name: Resolve release identifier
         run: echo "HUGO_PARAMS_RELEASE=$(git describe --tags --always --dirty)" >> "$GITHUB_ENV"
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v6
+      - name: Verify LFS media
+        run: bash ./scripts/r2-media.sh check
+      - name: Install Wrangler CLI
+        run: npm install --global wrangler@${WRANGLER_VERSION}
+      - name: Sync media to R2
+        run: bash ./scripts/r2-media.sh sync
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
@@ -61,21 +62,10 @@ jobs:
           HUGO_ENV: production
         run: |
           hugo \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: ./public
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
+            --minify
+      - name: Verify production media URLs
+        run: bash ./scripts/r2-media.sh verify-public
+      - name: Remove R2 media from Worker assets
+        run: bash ./scripts/r2-media.sh prune-public
+      - name: Deploy Worker static assets
+        run: wrangler deploy

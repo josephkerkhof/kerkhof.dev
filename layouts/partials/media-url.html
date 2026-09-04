@@ -1,0 +1,4 @@
+{{- $resource := . -}} {{- if and hugo.IsProduction $resource.Params.r2 -}} {{-
+printf "%s%s" (strings.TrimSuffix "/" site.Params.mediaBaseURL)
+$resource.RelPermalink -}} {{- else -}} {{- $resource.RelPermalink -}} {{- end
+-}}

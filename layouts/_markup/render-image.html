@@ -1,0 +1,15 @@
+{{- $resource := .Page.Resources.GetMatch .Destination -}} {{- $src :=
+.Destination -}} {{- with $resource -}} {{- $src = partial "media-url.html" .
+-}} {{- end -}}
+<img
+  src="{{ $src | safeURL }}"
+  alt="{{ .Text }}"
+  {{
+  with
+  .Title
+  }}
+  title="{{ . }}"
+  {{
+  end
+  }}
+/>

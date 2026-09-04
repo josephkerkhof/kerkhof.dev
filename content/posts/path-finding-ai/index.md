@@ -3,9 +3,12 @@ title: "The Dots Find Their Way"
 date: 2023-09-28T16:22:21-05:00
 draft: false
 tags:
-- 🖥️ programming
-- 🧠 artificial intelligence
-
+  - 🖥️ programming
+  - 🧠 artificial intelligence
+resources:
+  - src: "*.mp4"
+    params:
+      r2: true
 ---
 
 ## It started with boredom as all good things do
@@ -16,9 +19,9 @@ Naturally, I was interested in concepts I was learning about in machine learning
 
 {{< callout text="The idea: see if moving dots can find their way through an obstacle course while trying to reach a target." >}}
 
- At the beginning of each generation, the dots start at a given location and try to work their way towards a goal. In my example, the dots start at the bottom of a window and try to move towards a red dot (the goal) at the top. If a dot hits an obstacle or the side of the window, they "die" or stop moving.
+At the beginning of each generation, the dots start at a given location and try to work their way towards a goal. In my example, the dots start at the bottom of a window and try to move towards a red dot (the goal) at the top. If a dot hits an obstacle or the side of the window, they "die" or stop moving.
 
- Here's what I came up with:
+Here's what I came up with:
 
 {{< video src="one-obstacle" controls="false" muted="true" autoplay="true" loop="true" width="300px" title="A simple one-obstacle course" >}}
 
