@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Cloudflare Web Analytics beacon, rendered in production builds from
+  `params.cloudflareAnalyticsToken`.
+
 ## [1.0.14] - 2026-09-04
 
 ### Changed

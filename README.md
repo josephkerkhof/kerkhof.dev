@@ -86,13 +86,24 @@ site live in Cloudflare. The one-time R2 setup commands are:
 wrangler r2 bucket create kerkhof-dev-media
 wrangler r2 bucket domain add kerkhof-dev-media \
   --domain media.kerkhof.dev \
-  --zone-id fc1ce582d3cb3aee70e6670385be3624 \
+  --zone-id "$CLOUDFLARE_ZONE_ID" \
   --min-tls 1.2
 ```
 
-Cloudflare Web Analytics can be enabled without repository JavaScript: add
-`kerkhof.dev` under **Analytics & Logs > Web Analytics** and leave automatic
-setup enabled after the hostname is proxied through Cloudflare.
+Find the zone ID in the Cloudflare dashboard and provide it through the local
+`CLOUDFLARE_ZONE_ID` environment variable. Do not commit account or zone IDs.
+
+## Analytics
+
+Cloudflare Web Analytics uses manual setup. Automatic edge injection does not
+reach HTML that Workers Static Assets serves, so the beacon is rendered by
+`layouts/partials/footer.html` in production builds only.
+
+Add `kerkhof.dev` under account **Analytics > Web analytics**, open **Manage
+site**, and select **Enable with JS Snippet installation**. Copy the site token
+from the shown snippet into `params.cloudflareAnalyticsToken` in `config.toml`.
+The token is public page data, not a secret. Leaving the param empty omits the
+beacon.
 
 ## Media
 
@@ -119,7 +130,7 @@ catch missing `r2 = true` metadata before `make media-sync` uploads it.
 
 The deployment workflow requires these repository secrets:
 
-- `CLOUDFLARE_ACCOUNT_ID`: `3a6a27ed8c26c4d7a628c976b07e527a`
+- `CLOUDFLARE_ACCOUNT_ID`: the account ID shown in the Cloudflare dashboard
 - `CLOUDFLARE_API_TOKEN`: a scoped Cloudflare API token
 
 The token needs these permissions, limited to Joseph@kerkhof.dev's account
