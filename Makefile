@@ -25,7 +25,7 @@ release:
 	bash ./release.sh "$(VERSION)"
 
 server:
-	hugo server -D --bind 127.0.0.1 --port 1313 --baseURL http://127.0.0.1:1313/ $(HUGO_ARGS)
+	hugo server -D --renderToMemory --bind 127.0.0.1 --port 1313 --baseURL http://127.0.0.1:1313/ $(HUGO_ARGS)
 
 worker-dev:
 	HUGO_ENVIRONMENT=development HUGO_ENV=development $(MAKE) build
