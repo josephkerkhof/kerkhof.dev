@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.17] - 2026-09-09
+
 ### Changed
 
 - Replaced the floating paper frame with a full-viewport layout and added an
@@ -148,7 +150,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed the external Hugo theme dependency.
 - Removed expired GPG contact details.
 
-[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.16...HEAD
+[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.17...HEAD
+[1.0.17]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.16...v1.0.17
 [1.0.16]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.15...v1.0.16
 [1.0.15]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.14...v1.0.15
 [1.0.14]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.13...v1.0.14
