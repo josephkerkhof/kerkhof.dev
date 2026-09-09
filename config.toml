@@ -1,7 +1,7 @@
 baseURL = 'https://kerkhof.dev/'
 locale = 'en-US'
 title = "Joseph Kerkhof"
-canonifyURLs = true
+canonifyURLs = false
 
 [markup.highlight]
     codeFences = true

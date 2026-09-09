@@ -3,8 +3,13 @@
   {{ partial "head.html" . }}
   <body{{ if .IsHome }} class="home"{{ end }}>
     <a class="skip-link" href="#main-content">Skip to content</a>
-    {{ partial "header.html" . }}
-    {{ block "main" . }}{{ end }}
-    {{ partial "footer.html" . }}
+    <div class="application-frame">
+      <div class="document-frame">
+        {{ partial "header.html" . }}
+        {{ block "main" . }}{{ end }}
+        {{ partial "footer.html" . }}
+      </div>
+      {{ partial "scroll-rail.html" . }}
+    </div>
   </body>
 </html>

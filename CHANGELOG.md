@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Replaced the floating paper frame with a full-viewport layout and added an
+  accessible desktop document scrollbar.
+
 ## [1.0.16] - 2026-09-04
 
 ### Added

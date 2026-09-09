@@ -55,21 +55,25 @@
 
 html {
   color: var(--ink);
-  background: var(--desk);
+  background: var(--paper);
   font-family: var(--serif);
   font-size: 18px;
   line-height: 1.55;
+  overscroll-behavior-y: none;
+  scrollbar-width: none;
   text-rendering: optimizeLegibility;
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
 body {
-  position: relative;
-  width: min(calc(100% - 40px), 1280px);
-  min-height: calc(100vh - 40px);
-  margin: 20px auto;
+  min-width: 0;
+  min-height: 100vh;
+  margin: 0;
   background: var(--paper);
-  border: 1px solid var(--paper-edge);
-  box-shadow: 3px 3px 0 rgb(11 11 10 / 12%);
+  overscroll-behavior-y: none;
   overflow-x: hidden;
 }
 
@@ -119,6 +123,16 @@ hr {
 .shell {
   width: min(100% - 48px, 1180px);
   margin-inline: auto;
+}
+
+.application-frame {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 22px;
+  min-height: 100vh;
+}
+
+.document-frame {
+  min-width: 0;
 }
 
 .skip-link {
@@ -203,6 +217,85 @@ hr {
 
 .site-nav a:hover:not([aria-current="page"]) {
   border-color: var(--ink);
+}
+
+.scroll-rail {
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  height: 100vh;
+  height: 100svh;
+  align-self: start;
+  flex-direction: column;
+  background: var(--paper);
+  border-left: 1px solid var(--ink);
+  font-family: var(--mono);
+  user-select: none;
+}
+
+.scroll-step {
+  display: grid;
+  flex: 0 0 21px;
+  width: 100%;
+  padding: 0;
+  place-items: center;
+  color: var(--ink);
+  background: var(--paper);
+  border: 0;
+  border-bottom: 1px solid var(--ink);
+  border-radius: 0;
+  font: inherit;
+  font-size: 0.46rem;
+  cursor: pointer;
+}
+
+.scroll-step--down {
+  border-top: 1px solid var(--ink);
+  border-bottom: 0;
+}
+
+.scroll-step:hover,
+.scroll-step:active {
+  color: var(--paper);
+  background: var(--ink);
+}
+
+.scroll-step:disabled {
+  color: var(--paper-edge);
+  background: var(--desk);
+  cursor: default;
+}
+
+.scroll-track {
+  position: relative;
+  flex: 1;
+  min-height: 40px;
+  background-color: var(--paper);
+  background-image: var(--dither);
+  background-size: 3px 3px;
+  cursor: pointer;
+}
+
+.scroll-thumb {
+  position: absolute;
+  inset: 0 1px auto;
+  min-height: 24px;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  cursor: grab;
+  touch-action: none;
+}
+
+.scroll-thumb::before {
+  position: absolute;
+  inset: 2px;
+  border: 1px solid var(--ink);
+  content: "";
+}
+
+.scroll-thumb.is-dragging {
+  cursor: grabbing;
 }
 
 .hero {
@@ -1025,6 +1118,10 @@ figcaption h4 {
 }
 
 @media (max-width: 880px) {
+  .application-frame {
+    grid-template-columns: minmax(0, 1fr) 22px;
+  }
+
   .letterhead {
     align-items: flex-start;
     flex-direction: column;
@@ -1056,16 +1153,15 @@ figcaption h4 {
 
 @media (max-width: 640px) {
   html {
-    background: var(--paper);
     font-size: 17px;
   }
 
-  body {
-    width: 100%;
-    min-height: 100vh;
-    margin: 0;
-    border: 0;
-    box-shadow: none;
+  .application-frame {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .scroll-rail {
+    display: none;
   }
 
   .shell {
@@ -1138,14 +1234,11 @@ figcaption h4 {
     background: #fff;
   }
 
-  body {
-    width: 100%;
-    min-height: auto;
-    margin: 0;
-    border: 0;
-    box-shadow: none;
+  .application-frame {
+    display: block;
   }
 
+  .scroll-rail,
   .site-nav,
   .skip-link,
   .actions,
