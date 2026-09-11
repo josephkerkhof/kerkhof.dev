@@ -18,3 +18,10 @@ hugo.linux
 
 # macOS metadata
 .DS_Store
+
+# devenv
+/.devenv*
+/.direnv/
+
+# Wrangler local state
+/.wrangler/

@@ -29,6 +29,9 @@ Cloudflare's `r2.dev` public URL is not enabled.
 
 ## Local Development
 
+This project uses [devenv](https://devenv.sh/) to provide Hugo Extended, Wrangler, and the supporting command-line tools.
+Run `devenv shell`, or run `direnv allow` once to activate the environment automatically when entering the repository.
+
 ```bash
 # Start the development server
 make server
