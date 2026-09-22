@@ -30,7 +30,9 @@ And the challenges would come in wave after wave. Once we made it through one se
 
 If you're familiar with Psalm 23, you know the verse:
 
-4. Even though I walk through the valley of the shadow of death, I fear no evil, for You are with me; Your rod and Your staff, they comfort me. (LSB)
+> Even though I walk through the valley of the shadow of death, I fear no evil, for You are with me; Your rod and Your staff, they comfort me.
+>
+> — Psalm 23:4 (LSB)
 
 In a sentence, this has been my story over the last two years. In the depths of anxiety and grief and loss, God's tender mercy was always there. I didn't always listen to hear His voice, but it was always there.
 
