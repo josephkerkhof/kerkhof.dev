@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.20] - 2026-09-21
+
 ### Fixed
 
 - Limit WebP Git LFS tracking to content media so static assets do not dirty release builds.
@@ -171,7 +173,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed the external Hugo theme dependency.
 - Removed expired GPG contact details.
 
-[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.19...HEAD
+[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.20...HEAD
+[1.0.20]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.19...v1.0.20
 [1.0.19]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.18...v1.0.19
 [1.0.18]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.17...v1.0.18
 [1.0.17]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.16...v1.0.17
