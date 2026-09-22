@@ -2,6 +2,10 @@
 title: "Dusting off the blogging machine"
 date: 2026-09-21T00:00:00-05:00
 draft: false
+resources:
+    - src: "*.webp"
+      params:
+        r2: true
 ---
 
 ![tired SpongeBob](spongebob-tired.webp)
