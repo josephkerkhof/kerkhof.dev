@@ -1,0 +1,32 @@
+{{- $description := .Description | default .Summary | default .Site.Params.description | plainify | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace | truncate 200 -}}
+{{- $title := .Title | default .Site.Title -}}
+{{- $image := .Site.Params.socialImage | absURL -}}
+{{- $imageAlt := .Site.Params.socialImageAlt | default .Site.Title -}}
+{{- $locale := .Site.Params.socialLocale | default "en_US" -}}
+{{- with .Params.socialImage -}}
+  {{- $resource := $.Resources.GetMatch . -}}
+  {{- if $resource -}}
+    {{- $image = partial "media-url.html" $resource -}}
+    {{- if not (hasPrefix $image "http") -}}
+      {{- $image = $image | absURL -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $image = . | absURL -}}
+  {{- end -}}
+{{- end -}}
+{{- with .Params.socialImageAlt -}}
+  {{- $imageAlt = . -}}
+{{- end -}}
+<meta property="og:locale" content="{{ $locale }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+<meta property="og:title" content="{{ $title }}" />
+<meta property="og:description" content="{{ $description }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:image" content="{{ $image }}" />
+<meta property="og:image:alt" content="{{ $imageAlt }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ $title }}" />
+<meta name="twitter:description" content="{{ $description }}" />
+<meta name="twitter:image" content="{{ $image }}" />
+<meta name="twitter:image:alt" content="{{ $imageAlt }}" />

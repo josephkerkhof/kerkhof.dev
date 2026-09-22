@@ -22,6 +22,9 @@ pagerSize = 4
 	mainSections = ["posts"]
 	mediaBaseURL = "https://media.kerkhof.dev"
 	motto = "Soli Deo gloria"
+	socialImage = "/images/open-graph.png"
+	socialImageAlt = "Grayscale profile portrait of Joseph Kerkhof."
+	socialLocale = "en_US"
 
 [params.author]
     name = "Joseph Kerkhof"

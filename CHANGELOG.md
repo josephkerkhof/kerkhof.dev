@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Add complete Open Graph and X Card metadata, including a grayscale profile
+  fallback image and article-specific preview images.
+
 ## [1.0.20] - 2026-09-21
 
 ### Fixed

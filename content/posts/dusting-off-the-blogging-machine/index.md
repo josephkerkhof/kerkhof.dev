@@ -2,6 +2,8 @@
 title: "Dusting off the blogging machine"
 date: 2026-09-21T00:00:00-05:00
 draft: false
+socialImage: "spongebob-tired.webp"
+socialImageAlt: "Tired SpongeBob resting his hand on a post and exhaling"
 resources:
     - src: "*.webp"
       params:

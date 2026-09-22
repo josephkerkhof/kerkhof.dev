@@ -18,8 +18,7 @@
     href="{{ .Permalink }}"
     title="{{ $.Site.Title }}"
   />
-  {{ end }} {{ template "_internal/opengraph.html" . }} {{ template
-  "_internal/twitter_cards.html" . }} {{ with resources.Get "css/site.css" }} {{
+  {{ end }} {{ partial "social-meta.html" . }} {{ with resources.Get "css/site.css" }} {{
   $style := . | minify | fingerprint }}
   <link
     rel="stylesheet"
