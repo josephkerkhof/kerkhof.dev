@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Limit WebP Git LFS tracking to content media so static assets do not dirty release builds.
+
 ## [1.0.19] - 2026-09-21
 
 ### Fixed
@@ -22,7 +26,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Store WebP images with Git LFS.
+- Store WebP content media with Git LFS.
 
 ## [1.0.17] - 2026-09-09
 
