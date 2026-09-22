@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Add "no-problemo" emoji to the Slack reaction collection.
+
 ### Changed
 
 - Format the Psalm 23 verse in "Dusting off the blogging machine" as a block quote.
