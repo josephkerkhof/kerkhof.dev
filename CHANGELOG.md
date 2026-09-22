@@ -9,7 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Added the “Dusting off the blogging machine” post.
 - Added a reproducible devenv environment for local Hugo and Workers development.
+
+### Changed
+
+- Store WebP images with Git LFS.
 
 ## [1.0.17] - 2026-09-09
 
