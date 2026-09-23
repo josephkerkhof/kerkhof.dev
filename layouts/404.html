@@ -1,8 +1,15 @@
 {{ define "main" }}
+  {{ $image := (.Site.GetPage "/404-media").Resources.GetMatch "barbie-shocked.gif" }}
   <main id="main-content" class="shell page-shell error-page">
-    <p class="error-code">404</p>
     <h1>Page not found.</h1>
-    <p class="lede">That address does not point to anything in the archive.</p>
+    <p class="lede">Whatever you were looking for is not here.</p>
+    <img
+      class="error-image"
+      src="{{ partial "media-url.html" $image }}"
+      width="{{ $image.Width }}"
+      height="{{ $image.Height }}"
+      alt="A Barbie doll putting her hands over her mouth"
+    />
     <a class="button" href="{{ "/" | relURL }}">Return home</a>
   </main>
 {{ end }}
