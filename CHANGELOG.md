@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add a web-optimized reaction GIF to the 404 page and deliver it with the
   existing Git LFS and R2 media pipeline.
 
+### Changed
+
+- Update content on the "now" page
+
 ## [1.0.22] - 2026-09-22
 
 ### Added
