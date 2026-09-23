@@ -7,7 +7,7 @@ resources:
       r2: true
 ---
 
-_Last updated 2 September 2026._
+_Last updated 22 September 2026._
 
 I live in New London, WI with my wife. We love living close to our family. I work for [Active Engagement](https://www.actengage.com)!
 
