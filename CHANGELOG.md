@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - Add pinned Markdown formatting, `make format` and `make format-check`, IntelliJ format-on-save setup instructions, and
   an opt-in native Git hook that checks staged Markdown without changing it.
+- Add the `📜 story` tag to “Dusting off the blogging machine”.
 
 ### Changed
 
