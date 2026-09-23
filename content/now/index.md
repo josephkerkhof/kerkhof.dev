@@ -9,19 +9,17 @@ resources:
 
 _Last updated 2 September 2026._
 
-I'm in New London, Wisconsin, working remotely and trying to build useful things without taking any of it too seriously.
+I live in New London, WI with my wife. We love living close to our family. I work for [Active Engagement](https://www.actengage.com)!
 
 ## What I'm working on
 
-Most of my work is in Laravel right now, especially its new AI tooling. I'm building a platform that coordinates specialized agents and a long-running email workflow across several business systems.
-
-The satisfying part isn't getting a demo to work; it's making products that meaningfully save time and improve the human experience.
+Most of my work is in Laravel right now, especially its new AI tooling. I'm building a tool that coordinates specialized agents and a long-running email workflow across several business systems.
 
 ## Things I'm tinkering with
 
-I'm also figuring out where coding agents are genuinely useful and where they're just making more code to review. Right now I am pretty firmly in the "read the code" camp (tho I fully admit this may change in the future). My current setup includes Claude Code and OpenCode, including repository context, specialized skills, MCP integrations, and trying to coerce agents to [do what I want](https://gist.github.com/josephkerkhof/281aecb3dcc983925bcec7d712c632b6).
+I'm tinkering with using Nix and home-manager to [declaratively manage](https://github.com/josephkerkhof/dotfiles/) my personal and work Macs. Currently, I'd say it's going better than I expected.
 
-In my off time, I'm working on a meal-planning app which agentically makes grocery store orders for you, a private coaching agent that turns my X activity into useful feedback, and a [multiplayer chess experiment](https://github.com/josephkerkhof/chess) (very WIP) that uses Cloudflare Durable Objects. Apparently, my idea of taking a break from software is writing different software. I'll collect the occasional technical note or odd little project on this site.
+I'm also building out some hobby project web services on Cloudflare. _(more blog posts on this coming soon)_
 
 ## At home
 
@@ -37,12 +35,4 @@ I recently picked up a Martin D-35 50th Anniversary Edition. I use it to play on
 
 _Isn't it pretty?_
 
-## The general direction
-
-I'm still partial to boring (maybe a better word is reliable) tools, clear architecture, good tests, and systems the next person can understand.
-
-My Christian faith anchors how I understand life and work. I trust in God's grace through faith and try to do the work in front of me faithfully.
-
-That's the broad picture. You can [say hello](/contact/), poke around my [GitHub](https://github.com/josephkerkhof), or read my [resume](https://raw.githubusercontent.com/josephkerkhof/resume/master/Joseph_Kerkhof.pdf) if you want the chronological version.
-
-_This is a [now page](https://nownownow.com/about): a snapshot of what I would tell a friend I had not seen in a year._
+_This is a [now page](https://nownownow.com/about)._
