@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.23] - 2026-09-22
+
 ### Added
 
 - Add a web-optimized reaction GIF to the 404 page and deliver it with the
@@ -199,7 +201,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed the external Hugo theme dependency.
 - Removed expired GPG contact details.
 
-[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.22...HEAD
+[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.23...HEAD
+[1.0.23]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.22...v1.0.23
 [1.0.22]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.21...v1.0.22
 [1.0.21]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.20...v1.0.21
 [1.0.20]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.19...v1.0.20
