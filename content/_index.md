@@ -2,7 +2,7 @@
 title: "Joseph Kerkhof"
 heroTitle: "Reliable systems, thoughtfully built."
 lede: "I'm Joseph, a senior backend engineer with %d+ years designing secure, reliable web and cloud systems."
-description: "Senior backend engineer specializing in PHP, Laravel, distributed architectures, AI workflows, and cloud systems."
+description: "Senior backend engineer specializing in Laravel/PHP, AI workflows, and cloud systems."
 resume: "https://raw.githubusercontent.com/josephkerkhof/resume/master/Joseph_Kerkhof.pdf"
 profileImage: "/images/profile.webp"
 profileAlt: "Joseph Kerkhof"
