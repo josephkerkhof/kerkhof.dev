@@ -31,7 +31,7 @@ media-prune:
 	bash ./scripts/r2-media.sh prune-public
 
 release:
-	bash ./release.sh "$(VERSION)"
+	bash ./scripts/release.sh "$(VERSION)"
 
 server:
 	hugo server -D --renderToMemory --bind 127.0.0.1 --port 1313 --baseURL http://127.0.0.1:1313/ $(HUGO_ARGS)

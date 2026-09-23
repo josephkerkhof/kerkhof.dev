@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - Consistently wrap site prose at 120 characters while preserving code examples and Hugo shortcodes.
+- Move the release script into `scripts/`, retaining `make release` as the entry point.
 
 ## [1.0.23] - 2026-09-22
 
