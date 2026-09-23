@@ -19,7 +19,7 @@ agents and a long-running email workflow across several business systems.
 
 ## Things I'm tinkering with
 
-I'm tinkering with using Nix and home-manager to [declaratively manage](https://github.com/josephkerkhof/dotfiles/) my 
+I'm tinkering with using Nix and home-manager to [declaratively manage](https://github.com/josephkerkhof/dotfiles/) my
 personal and work Macs. In that same vein, I'm also experimenting with devenv for all my hobby projects. Currently, I'd
 say it's going better than I expected.
 
@@ -37,7 +37,8 @@ in 1911. More than a century has given it plenty of time to come up with project
 I recently picked up a Martin D-35 50th Anniversary Edition. I use it to play on Sundays at my local church. I'm really
 proud of it and love the sound it makes. Ask me sometime how God blessed me with this instrument; it's a cool story.
 
-![Front of my Martin D-35 50th Anniversary Edition](martin-d35-front.webp) ![Three-piece back of my Martin D-35 50th Anniversary Edition](martin-d35-back.webp)
+![Front of my Martin D-35 50th Anniversary Edition](martin-d35-front.webp)
+![Three-piece back of my Martin D-35 50th Anniversary Edition](martin-d35-back.webp)
 
 _Isn't it pretty?_
 

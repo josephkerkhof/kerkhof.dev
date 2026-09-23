@@ -2,17 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to
+[Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+### Added
+
+- Add pinned Markdown formatting, `make format` and `make format-check`, IntelliJ format-on-save setup instructions, and
+  an opt-in native Git hook that checks staged Markdown without changing it.
+
+### Changed
+
+- Consistently wrap site prose at 120 characters while preserving code examples and Hugo shortcodes.
 
 ## [1.0.23] - 2026-09-22
 
 ### Added
 
-- Add a web-optimized reaction GIF to the 404 page and deliver it with the
-  existing Git LFS and R2 media pipeline.
+- Add a web-optimized reaction GIF to the 404 page and deliver it with the existing Git LFS and R2 media pipeline.
 
 ### Changed
 
@@ -32,8 +40,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Add complete Open Graph and X Card metadata, including a grayscale profile
-  fallback image and article-specific preview images.
+- Add complete Open Graph and X Card metadata, including a grayscale profile fallback image and article-specific preview
+  images.
 
 ## [1.0.20] - 2026-09-21
 
@@ -62,8 +70,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Replaced the floating paper frame with a full-viewport layout and added an
-  accessible desktop document scrollbar.
+- Replaced the floating paper frame with a full-viewport layout and added an accessible desktop document scrollbar.
 
 ## [1.0.16] - 2026-09-04
 
@@ -75,14 +82,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Cloudflare Web Analytics beacon, rendered in production builds from
-  `params.cloudflareAnalyticsToken`.
+- Cloudflare Web Analytics beacon, rendered in production builds from `params.cloudflareAnalyticsToken`.
 
 ## [1.0.14] - 2026-09-04
 
 ### Changed
 
-- Migrated production hosting from GitHub Pages to Cloudflare Workers Static Assets and moved Git LFS content media delivery to Cloudflare R2.
+- Migrated production hosting from GitHub Pages to Cloudflare Workers Static Assets and moved Git LFS content media
+  delivery to Cloudflare R2.
 
 ### Added
 
@@ -137,7 +144,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Replaced the path-finding videos with broadly compatible MP4 files and ensured Pages deploys their Git LFS contents instead of pointer files.
+- Replaced the path-finding videos with broadly compatible MP4 files and ensured Pages deploys their Git LFS contents
+  instead of pointer files.
 
 ## [1.0.6] - 2026-08-26
 
@@ -166,7 +174,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Restyled syntax highlighting with the Islands Dark palette used by the author's editors, including semantic TypeScript tokens and language-aware function and method calls.
+- Restyled syntax highlighting with the Islands Dark palette used by the author's editors, including semantic TypeScript
+  tokens and language-aware function and method calls.
 - Reduced the size of top-level page headings.
 - Based the homepage experience duration on the start of the Clockwork role in March 2019.
 

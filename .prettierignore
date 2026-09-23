@@ -1,0 +1,5 @@
+# Format root documentation and site content only. In particular, Hugo archetypes
+# contain template expressions rather than ordinary Markdown/YAML.
+/*
+!/*.md
+!/content/

@@ -5,7 +5,9 @@
     git-lfs
     gnumake
     hugo
+    nodejs
     perl
+    prettier
     wrangler
   ];
 }

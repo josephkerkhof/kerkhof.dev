@@ -1,4 +1,4 @@
-.PHONY: build clean media-check media-prune media-sync media-verify release server worker-dev worker-deploy
+.PHONY: build clean format format-check hooks media-check media-prune media-sync media-verify release server worker-dev worker-deploy
 
 HUGO_PARAMS_RELEASE := $(shell git describe --tags --always --dirty)
 export HUGO_PARAMS_RELEASE
@@ -8,6 +8,15 @@ build: clean
 
 clean:
 	rm -rf public
+
+format:
+	bash ./scripts/prettier.sh --write '*.md' 'content/**/*.md'
+
+format-check:
+	bash ./scripts/prettier.sh --check '*.md' 'content/**/*.md'
+
+hooks:
+	bash ./scripts/install-hooks.sh
 
 media-check:
 	bash ./scripts/r2-media.sh check

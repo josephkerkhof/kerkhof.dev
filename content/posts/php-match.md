@@ -14,13 +14,22 @@ PHP is [often criticized](http://www.phpsadness.com/) for being a bad language. 
 - a history of [insecure mysql](https://www.youtube.com/watch?v=_jKylhJtPmI) functions
 - there is a lot of bad PHP code in the world
 
-Despite these criticisms (though the last isn't really PHP's fault), PHP remains a very popular web language choice. There are plenty of [mature](https://laravel.org/), [well-tested](https://wordpress.org) [frameworks](https://drupal.org) to [make](https://symfony.com/) getting started easy. [Composer](https://getcomposer.org/) is an excellent package manager and there are no [shortage](https://codeception.com/) of [testing](https://phpunit.de/) [libraries](https://pestphp.com/).
+Despite these criticisms (though the last isn't really PHP's fault), PHP remains a very popular web language choice.
+There are plenty of [mature](https://laravel.org/), [well-tested](https://wordpress.org)
+[frameworks](https://drupal.org) to [make](https://symfony.com/) getting started easy.
+[Composer](https://getcomposer.org/) is an excellent package manager and there are no
+[shortage](https://codeception.com/) of [testing](https://phpunit.de/) [libraries](https://pestphp.com/).
 
-Yet, PHP consistently ranks near the middle of the pack of desired and admired technologies in the [StackOverflow Developer Survey](https://survey.stackoverflow.co/2023/#technology-admired-and-desired). PHP is perhaps the boring choice. But boring isn't _necessarily bad_. Boring can means stable which means capital investment can proceed more confidently.
+Yet, PHP consistently ranks near the middle of the pack of desired and admired technologies in the
+[StackOverflow Developer Survey](https://survey.stackoverflow.co/2023/#technology-admired-and-desired). PHP is perhaps
+the boring choice. But boring isn't _necessarily bad_. Boring can means stable which means capital investment can
+proceed more confidently.
 
-This isn't to say there aren't still quality-of-life improvements happening in the PHP world. PHP 8 brought in the new JIT compiler, more type hinting, attributes, and other new language features.
+This isn't to say there aren't still quality-of-life improvements happening in the PHP world. PHP 8 brought in the new
+JIT compiler, more type hinting, attributes, and other new language features.
 
-One such quality-of-life language feature is PHP's new `match` statement. You can think of it as a fancy ternary statement with more flexibility.
+One such quality-of-life language feature is PHP's new `match` statement. You can think of it as a fancy ternary
+statement with more flexibility.
 
 Here's an example of how `match` works in action:
 
@@ -38,9 +47,12 @@ $suit_string = match ($suit) {
 print($suit_string); // Prints "We are holding hearts"
 ```
 
-The syntax is fairly easy to understand even to someone who hasn't seen it before. We are assigning a variable on the condition that a variable matches a set of conditions. This is very similar to the `switch` statement, but there are a couple differences.
+The syntax is fairly easy to understand even to someone who hasn't seen it before. We are assigning a variable on the
+condition that a variable matches a set of conditions. This is very similar to the `switch` statement, but there are a
+couple differences.
 
-1. The match function uses an identity check (`===`) where the switch statement uses a weak equality check (`==`) (`2 === '2'` will return `false`).
+1. The match function uses an identity check (`===`) where the switch statement uses a weak equality check (`==`)
+   (`2 === '2'` will return `false`).
 2. The `match` expression returns a value. The case statement doesn't return anything.
 3. The `match` expression can perform non-identity checks.
 
@@ -75,7 +87,8 @@ print($suit_string); // Prints "We are holding hearts"
 
 Look at all those extra `break;` and `case` statements and variable assignment operations. Gross!
 
-Something else `switch` cannot do that `match` can: perform non-identity checks (`===`) by passing `true` into the subject expression:
+Something else `switch` cannot do that `match` can: perform non-identity checks (`===`) by passing `true` into the
+subject expression:
 
 ```php
 $old_decades = ['1940s', '1950s', '1960s', '1970s', '1980s'];
@@ -89,7 +102,8 @@ $output = match (true) {
 print($output); // Prints "The selected decade is not old!"
 ```
 
-This is a new level of succinctness, power, and expression. Once you start using `match` it's easy to see many useful applications. Here's the classic fizzbuzz program implemented using `match`:
+This is a new level of succinctness, power, and expression. Once you start using `match` it's easy to see many useful
+applications. Here's the classic fizzbuzz program implemented using `match`:
 
 ```php
 $n = 100;

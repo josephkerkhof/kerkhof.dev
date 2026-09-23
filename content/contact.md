@@ -13,4 +13,5 @@ curl -sL https://kerkhof.dev/josephkerkhof.gpg | gpg --import
 
 Fingerprint: `51C7 FCE5 909B 5D1F 8081 3F06 71A6 96CA C91E CA76`
 
-You may also find me on [X](https://x.com/josephkerkhof), [LinkedIn](https://www.linkedin.com/in/josephkerkhof/), and [GitHub](https://github.com/josephkerkhof).
+You may also find me on [X](https://x.com/josephkerkhof), [LinkedIn](https://www.linkedin.com/in/josephkerkhof/), and
+[GitHub](https://github.com/josephkerkhof).
