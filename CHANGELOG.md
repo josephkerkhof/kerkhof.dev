@@ -14,6 +14,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 
 - Move the Martin D-35 photos from the Now page into the new post.
+- Refresh the Now page for October with current personal projects, work, and music practice.
+
+### Fixed
+
+- Use a lowercase guitar post bundle path so its R2 photo keys match Hugo's generated URLs.
 
 ## [1.0.24] - 2026-09-22
 
