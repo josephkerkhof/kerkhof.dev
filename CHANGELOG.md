@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [1.0.25] - 2026-10-01
+
 ### Added
 
 - Add “How I got my acoustic guitar,” a post about finding a Martin D-35 50th Anniversary Edition.
@@ -227,7 +229,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Removed the external Hugo theme dependency.
 - Removed expired GPG contact details.
 
-[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.24...HEAD
+[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.25...HEAD
+[1.0.25]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.24...v1.0.25
 [1.0.24]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.23...v1.0.24
 [1.0.23]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.22...v1.0.23
 [1.0.22]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.21...v1.0.22
