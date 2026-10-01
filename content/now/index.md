@@ -38,12 +38,4 @@ I'm currently learning on guitar:
 
 The former is a challenge for my left hand, the latter a challenge for my right.
 
-I recently picked up a Martin D-35 50th Anniversary Edition. I use it to play on Sundays at my local church. I'm really
-proud of it and love the sound it makes. Ask me sometime how God blessed me with this instrument; it's a cool story.
-
-![Front of my Martin D-35 50th Anniversary Edition](martin-d35-front.webp)
-![Three-piece back of my Martin D-35 50th Anniversary Edition](martin-d35-back.webp)
-
-_Isn't it pretty?_
-
 _This is a [now page](https://nownownow.com/about)._

@@ -7,6 +7,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- Add “How I got my acoustic guitar,” a post about finding a Martin D-35 50th Anniversary Edition.
+
+### Changed
+
+- Move the Martin D-35 photos from the Now page into the new post.
+
 ## [1.0.24] - 2026-09-22
 
 ### Added
