@@ -44,9 +44,8 @@ back. When I played it, it had a warmer, fuller sound than the D-28.
 
 In the end, it was an easy decision to return the D-28 to Guitar Center for a full refund.
 
-The used 50th anniversary edition D-35, albeit slightly different guitar than the D-28, was cheaper than the one from
-GC! And the D-35 is actually _better_ for my playing use-case than the D-28. I mostly play hymns at church, so the D-35
-is perfect.
+The used 50th anniversary edition D-35 was cheaper than the new D-28 from Guitar Center! And it’s actually _better_
+suited to the music I perform (hymns at church).
 
 I get some serious joy out of playing this instrument, and I feel very blessed to own it.
 
