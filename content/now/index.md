@@ -7,23 +7,20 @@ resources:
       r2: true
 ---
 
-_Last updated 22 September 2026._
-
-I live in New London, WI with my wife. We love living close to our family. I work for
-[Active Engagement](https://www.actengage.com)!
+_Last updated 1 October 2026._
 
 ## What I'm working on
 
-Most of my work is in Laravel right now, especially its new AI tooling. I'm building a tool that coordinates specialized
-agents and a long-running email workflow across several business systems.
+### Personal
 
-## Things I'm tinkering with
+- Building a [chess engine](https://github.com/josephkerkhof/chess) on Cloudflare w/matchmaking
+- Continuing to evolve my nix [dotfiles](https://github.com/josephkerkhof/dotfiles/). I've leaned back into IntelliJ
+  instead of neovim for now. It really is a fantastic multitool; code, data, and services all in one.
 
-I'm tinkering with using Nix and home-manager to [declaratively manage](https://github.com/josephkerkhof/dotfiles/) my
-personal and work Macs. In that same vein, I'm also experimenting with devenv for all my hobby projects. Currently, I'd
-say it's going better than I expected.
+### Work
 
-I'm also building out some hobby project web services on Cloudflare. _(more blog posts on this coming soon)_
+- I'm managing a fleet of web services on bare metal servers in a physical location in our office. I never thought I'd
+  be using my experience self-hosting in my basement professionally, but here we are!
 
 ## At home
 
@@ -32,7 +29,14 @@ in 1911. More than a century has given it plenty of time to come up with project
 
 ![Our horses at home](horses-at-home.webp)
 
-## New guitar
+## Music-wise
+
+I'm currently learning on guitar:
+
+- Tommy Emmanuel's [Angelina](https://www.youtube.com/watch?v=XWS1IRF_IFA).
+- The Corner Room's [Psalm 119:33-40](https://www.youtube.com/watch?v=RKPAKRWg9GA).
+
+The former is a challenge for my left hand, the latter a challenge for my right.
 
 I recently picked up a Martin D-35 50th Anniversary Edition. I use it to play on Sundays at my local church. I'm really
 proud of it and love the sound it makes. Ask me sometime how God blessed me with this instrument; it's a cool story.
