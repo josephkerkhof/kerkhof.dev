@@ -4,3 +4,4 @@ content/fun/slack-reactions/images/*.jpg filter=lfs diff=lfs merge=lfs -text
 content/fun/slack-reactions/images/*.png filter=lfs diff=lfs merge=lfs -text
 content/404-media/*.gif filter=lfs diff=lfs merge=lfs -text
 content/**/*.webp filter=lfs diff=lfs merge=lfs -text
+static/images/profile.webp filter=lfs diff=lfs merge=lfs -text

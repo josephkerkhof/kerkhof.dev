@@ -22,7 +22,8 @@ application code. The `kerkhof-dev-media` R2 bucket stores article photos, anima
 configuration.
 
 HTML, XML, CSS, fonts, the profile image, and other structural files are Workers Static Assets. Content media tracked by
-Git LFS is delivered from R2. Cloudflare's `r2.dev` public URL is not enabled.
+Git LFS is delivered from R2. The profile image is also tracked by Git LFS, but is deployed as a Workers Static Asset.
+Cloudflare's `r2.dev` public URL is not enabled.
 
 ## Local Development
 

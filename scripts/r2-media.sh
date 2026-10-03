@@ -14,7 +14,7 @@ hash_file() {
 }
 
 media_files() {
-  git lfs ls-files --name-only | LC_ALL=C sort
+  git lfs ls-files --include='content/**' --name-only | LC_ALL=C sort
 }
 
 validate_media() {

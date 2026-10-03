@@ -7,6 +7,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Changed
+
+- Replace the homepage profile photo with a web-optimized restaurant portrait tracked by Git LFS.
+- Limit R2 media processing to content files so LFS-tracked static assets remain in the Worker deployment.
+
 ## [1.0.25] - 2026-10-01
 
 ### Added
