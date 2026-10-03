@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [1.0.26] - 2026-10-03
+
 ### Changed
 
 - Replace the homepage profile photo with a web-optimized restaurant portrait tracked by Git LFS.
@@ -234,7 +236,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Removed the external Hugo theme dependency.
 - Removed expired GPG contact details.
 
-[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.25...HEAD
+[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.26...HEAD
+[1.0.26]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.25...v1.0.26
 [1.0.25]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.24...v1.0.25
 [1.0.24]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.23...v1.0.24
 [1.0.23]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.22...v1.0.23
