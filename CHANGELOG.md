@@ -7,6 +7,29 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+### Added
+
+- Add a 2026 testimonial from my lead developer at Active Engagement.
+
+### Changed
+
+- Rewrite the homepage lede to say what I build and run, so it no longer repeats “reliable” from the headline.
+- Move Dev Philosophy to the top of the homepage and rewrite it to be shorter, with a section on how I work with AI
+  tools.
+- Shorten the 2021 Clockwork testimonial to its engineering and leadership parts.
+- Change the profile card focus to backend systems and production ops, add PostgreSQL to the core stack, and add a
+  GitHub link.
+
+### Removed
+
+- Remove the homepage intro paragraph.
+- Remove the homepage Recent Work section; the resume carries that detail.
+- Remove the “It's me!” title bar from the profile card.
+
+### Fixed
+
+- Correct the guitar post URL spelling to `how-i-got-my-new-acoustic-guitar` and redirect the old URL.
+
 ## [1.0.26] - 2026-10-03
 
 ### Changed

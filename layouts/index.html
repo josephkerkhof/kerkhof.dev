@@ -12,22 +12,23 @@
       </div>
 
       <aside class="window profile-window" aria-label="Profile details">
-        <div class="window-titlebar">It's me!</div>
         <div class="window-body">
           <img class="profile-image" src="{{ .Params.profileImage | relURL }}" alt="{{ .Params.profileAlt }}" width="640" height="640">
           <dl class="property-sheet">
             <dt>Role</dt>
             <dd>Senior backend engineer</dd>
             <dt>Focus</dt>
-            <dd>AI workflows and cloud systems</dd>
+            <dd>Backend systems and production ops</dd>
             <dt>Core stack</dt>
-            <dd>PHP, Laravel, MySQL, Redis</dd>
+            <dd>PHP, Laravel, PostgreSQL, MySQL, Redis</dd>
             <dt>Cloud</dt>
             <dd>AWS, Docker, Kubernetes, OpenTelemetry</dd>
             <dt>Remote since</dt>
             <dd>2019</dd>
             <dt>Email</dt>
             <dd><a href="mailto:{{ .Site.Params.author.email }}">{{ .Site.Params.author.email }}</a></dd>
+            <dt>GitHub</dt>
+            <dd><a href="https://github.com/{{ .Site.Params.author.github }}" target="_blank" rel="noopener noreferrer">{{ .Site.Params.author.github }}</a></dd>
             <dt>X</dt>
             <dd><a href="https://x.com/josephkerkhof" target="_blank" rel="noopener noreferrer">@josephkerkhof</a></dd>
             <dt>LinkedIn</dt>
