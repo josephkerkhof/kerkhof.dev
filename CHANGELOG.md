@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [1.0.27] - 2026-10-08
+
 ### Added
 
 - Add a 2026 testimonial from my lead developer at Active Engagement.
@@ -259,7 +261,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Removed the external Hugo theme dependency.
 - Removed expired GPG contact details.
 
-[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.26...HEAD
+[Unreleased]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.27...HEAD
+[1.0.27]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.26...v1.0.27
 [1.0.26]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.25...v1.0.26
 [1.0.25]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.24...v1.0.25
 [1.0.24]: https://github.com/josephkerkhof/kerkhof.dev/compare/v1.0.23...v1.0.24
